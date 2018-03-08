@@ -71,11 +71,11 @@ function addIconsWithText(){
         </li>`;
 
     const iconPrint = `<li class="print">
-            <a data-capture-key="print-this-article" data-show-popup="login-overlay" class="mck-print-icon social-contact" aria-labelledby="open-interactive" target="_blank">Print</a>
+            <a data-capture-key="print-this-article" data-show-popup="login-overlay" class="mck-print-icon social-contact" aria-labelledby="open-interactive" target="_blank"></a>
         </li>`;
 
     const iconShare = `<li>
-            <a data-capture-key="share-this-article" data-show-popup="login-overlay" class="mck-share-icon social-contact" aria-labelledby="share-interactive" target="_blank">Share</a>
+            <a data-capture-key="share-this-article" data-show-popup="login-overlay" class="mck-share-icon social-contact" aria-labelledby="share-interactive" target="_blank"></a>
         </li>`
     const iconsArray = [];
 
