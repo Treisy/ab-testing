@@ -1,0 +1,21 @@
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.mck-share-icon {
+    background-color: #B4BF25;   
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.mck-share-icon:before {
+    color: #FFFFFF; 
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-subscribe {
+    margin-top: 0;
+    font-size:16px;
+    padding-top: 27px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-subscribe:before {
+    content: "Subscribe";
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>.subscribe {
+    width: auto;
+}

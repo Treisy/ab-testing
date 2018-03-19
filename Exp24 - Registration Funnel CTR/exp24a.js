@@ -1,73 +1,33 @@
-const btnSuscribeTemplate = `<li class="suscribe">
-        <a class="btn btn-fill btn-suscribe" aria-labelledby="Suscribe" href="#buttons"></a>
-    </li>`;
-const iconsContainer = document.querySelector('.sticky-share figure ul');
-
-loadEventListeners();
-
-function loadEventListeners() {
-    document.addEventListener('DOMContentLoaded', AddStyles);
-    document.addEventListener('DOMContentLoaded', changeText);
-    document.addEventListener('DOMContentLoaded', removeIcons);
-    document.addEventListener('DOMContentLoaded', addIcon);
-};
+var btnSuscribeTemplate = '<li class="subscribe"><a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="#buttons"></a></li>';
+var iconsContainer = document.querySelector('.sticky-share figure ul');
 
 function changeText() {
-    const stickyTitle = document.getElementsByClassName('sticky-share-title')[0];
+    var stickyTitle = document.getElementsByClassName('sticky-share-title')[0];
 
     stickyTitle.innerText = 'Making it in America: Revitalizing US manufactoring';
-};
+}
 
 function removeIcons() {
-    iconsContainer.removeChild(document.querySelector('li .mck-linkedin-icon').parentElement);
-    iconsContainer.removeChild(document.querySelector('li .mck-twitter-icon').parentElement);
-    iconsContainer.removeChild(document.querySelector('li .mck-facebook-icon').parentElement);
-};
-
-function AddStyles() {
-    const css = `.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.mck-share-icon {
-        background-color: #B4BF25;   
-    }
-
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.mck-share-icon:before {
-        color: #FFFFFF; 
-    }
-
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-suscribe {
-        margin-top: 0;
-        font-size:16px;
-        padding-top: 27px;
-    }
-
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-suscribe:before {
-        content: "Suscribe";
-    }
-
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li.suscribe {
-        width: auto;
-    }
-    `;
-
-    let styleElement = document.createElement('STYLE');
-
-    let style = document.createTextNode(css);
-
-    styleElement.appendChild(style);
-    document.head.appendChild(styleElement);
-};
+    var iconLinkedIn = document.querySelector('.sticky-share figure ul li a.mck-linkedin-icon');
+    var iconTwitter = document.querySelector('.sticky-share figure ul li a.mck-twitter-icon');
+    var iconFacebook = document.querySelector('.sticky-share figure ul li a.mck-facebook-icon');
+    
+    iconLinkedIn.parentNode.removeChild(iconLinkedIn);
+    iconTwitter.parentNode.removeChild(iconTwitter);
+    iconFacebook.parentNode.removeChild(iconFacebook);
+}
 
 function addIcon(){
-    const iconShare = `<li>
-            <a data-capture-key="share-this-article" data-show-popup="login-overlay" class="interactive-link show-popup mck-share-icon download-this-article" aria-labelledby="share-interactive" role="button" target="_blank"></a>
-        </li>`
-    const iconsArray = [];
+    var iconShare = '<li><a data-capture-key="share-this-article" data-show-popup="login-overlay" class="interactive-link show-popup mck-share-icon download-this-article" aria-labelledby="share-interactive" role="button" target="_blank"></a></li>';
+    
+    var iconsArray = [];
 
-    let download = document.querySelector('.sticky-share figure ul li .mck-download-icon').parentElement;
+    var download = document.querySelector('.sticky-share figure ul li .mck-download-icon').parentElement;
 
-    let print = document.querySelector('.sticky-share figure ul li .mck-print-icon').parentElement;
+    var print = document.querySelector('.sticky-share figure ul li .mck-print-icon').parentElement;
 
-    let iconPrint = `<li>${ print.innerHTML }</li>`;
-    let iconDownload = `<li>${ download.innerHTML }</li>`;
+    var iconPrint = '<li>' + print.innerHTML + '</li>';
+    var iconDownload = '<li>' + download.innerHTML + '</li>';
 
     iconsArray.push(btnSuscribeTemplate);
     iconsArray.push(iconDownload);
@@ -75,6 +35,11 @@ function addIcon(){
     iconsArray.push(iconShare);
 
     
-    iconsContainer.innerHTML = iconsArray.join('');
-};
+    $('.sticky-share figure ul').html(iconsArray.join(''));
+}
 
+$(document).ready(function(){
+    changeText();
+    removeIcons();
+    addIcon();
+});
