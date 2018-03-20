@@ -1,21 +1,44 @@
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.mck-share-icon {
-    background-color: #B4BF25;   
+.sticky-share-tools._show {
+    background-image: none;
+    background-color: #FFFFFF;
 }
 
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.mck-share-icon:before {
-    color: #FFFFFF; 
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-share-icon.social-contact  {
+    background-color: transparent;
+    font-size: 16px;
+    color: #00ADEF;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    font-family: Sans-Serif;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact {
+    padding-right: 24px;
+    padding-top: 20px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact:before {
+    color: #00ADEF;
+    top: 19px;
+    width: 24.7px;
+    height: 23.7px;
 }
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-subscribe {
-    margin-top: 0;
-    font-size:16px;
-    padding-top: 27px;
+    margin-top: 9px;
+    font-size: 16px;
+    padding-top: 19px;
+    width: 124px;
+    height: 41px;
 }
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-subscribe:before {
     content: "Subscribe";
 }
 
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>.subscribe {
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li {
     width: auto;
 }
