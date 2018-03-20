@@ -1,9 +1,10 @@
 .sticky-share-tools._show {
     background-image: none;
     background-color: #F7FAFB;
+    box-shadow: 0 3px 10px 0 rgba(220, 220, 220, 0.5);
 }
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-download-icon.social-contact,
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-print-icon.social-contact,
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-email-icon.social-contact,
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-share-icon.social-contact  {
     background-color: transparent;
     font-size: 16px;
@@ -15,19 +16,24 @@
     line-height: normal;
     letter-spacing: normal;
 }
-    
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact {
+    padding-right: 24px;
+}
+
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact:before {
     color: #00ADEF;
-    top: 16px;
+    top: 20px;
     width: 24.7px;
     height: 23.7px;
 }
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-subscribe {
-    margin: 4px 0;
-    font-size:16px;
-    padding-top: 24px;
-    height: 48px;
+    margin-top: 9px;
+    font-size: 16px;
+    padding-top: 19px;
+    width: 124px;
+    height: 41px;
 }
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-subscribe:before {
