@@ -43,3 +43,11 @@
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li {
     width: auto;
 }
+
+@media screen and (max-width: 47.9375em) {
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper {
+        margin-left: 81px;
+        width: 100%;
+        margin-right: 47px;
+    }
+}
