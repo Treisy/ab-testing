@@ -1,4 +1,4 @@
-var btnSuscribeTemplate = '<li><a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="#buttons"></a></li>';
+var btnSubscribeTemplate = '<li><a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="#buttons"></a></li>';
 
 
 function changeText() {
@@ -21,7 +21,7 @@ function addOptions(){
 
     optionsArray.push(iconEmail);
     optionsArray.push(iconShare);
-    optionsArray.push(btnSuscribeTemplate);
+    optionsArray.push(btnSubscribeTemplate);
     
     $('.sticky-share figure ul').html(optionsArray.join(''));
 }

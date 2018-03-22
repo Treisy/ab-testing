@@ -7,7 +7,7 @@
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-email-icon.social-contact,
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-share-icon.social-contact  {
     background-color: transparent;
-    font-size: 16px;
+    font-size: 24px;
     color: #00ADEF;
     font-weight: normal;
     font-stretch: normal;
@@ -17,23 +17,32 @@
     letter-spacing: normal;
 }
 
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-share-icon.social-contact::before {
+    content: " ";
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDVweCIgaGVpZ2h0PSI0NXB4IiB2aWV3Qm94PSIwIDAgNDUgNDUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ4LjIgKDQ3MzI3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5BcnRib2FyZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgc3Ryb2tlPSIjMDBBREVGIiBzdHJva2Utd2lkdGg9IjIiPgogICAgICAgICAgICA8ZyBpZD0ic2hhci1laWNvbiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMi4wMDAwMDAsIDEuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMzIiIGN5PSI2IiByPSI2Ij48L2NpcmNsZT4KICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwtQ29weSIgY3g9IjMyIiBjeT0iMzYiIHI9IjYiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbC1Db3B5LTIiIGN4PSI2IiBjeT0iMjEiIHI9IjYiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTEyLjA2MjUsMTguOSBMMjYuOTM3NSwxMC4xIiBpZD0iTGluZSIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTEyLjA2MjUsMjQgTDI2LjkzNzUsMzIiIGlkPSJMaW5lLTIiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
+    background-size: 100% 100%;
+    height: 24px;
+    width: 24px;
+}
+
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact {
-    padding-right: 24px;
+    padding-right: 13px;
 }
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact:before {
     color: #00ADEF;
-    top: 20px;
+    top: 18px;
     width: 24.7px;
     height: 23.7px;
 }
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-subscribe {
-    margin-top: 9px;
+    margin-top: 7px;
     font-size: 16px;
-    padding-top: 19px;
+    padding: 13px 11px 12px 11px;
     width: 124px;
-    height: 41px;
+    height: 42px;
+    line-height: 1
 }
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-subscribe:before {
@@ -46,8 +55,8 @@
 
 @media screen and (max-width: 47.9375em) {
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper {
-        margin-left: 81px;
+        margin-left: 58px;
         width: 100%;
-        margin-right: 47px;
+        margin-right: 36px;
     }
 }
