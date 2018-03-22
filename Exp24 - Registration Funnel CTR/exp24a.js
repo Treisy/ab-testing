@@ -1,9 +1,7 @@
 var btnSubscribeTemplate = '<li class="subscribe"><a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="#buttons"></a></li>';
 
 function changeText() {
-    var stickyTitle = document.getElementsByClassName('sticky-share-title')[0];
-
-    stickyTitle.innerText = 'Making it in America: Revitalizing US manufactoring';
+    $('.sticky-share-title').text('Making it in America: Revitalizing US manufactoring');
 }
 
 function removeIcons() {
@@ -19,11 +17,10 @@ function addOptions() {
     optionsArray.push(btnSubscribeTemplate);
 
     $('.sticky-share figure ul').html(optionsArray.join(''));
-
 }
 
- $(document).ready(function() {
+$(document).ready(function() {
     changeText();
     removeIcons();
     addOptions();
- });
+});
