@@ -87,7 +87,7 @@
     display: block;
     text-align: left;
     margin: 22px 30px 21px 99px;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.5;
     color: #777777;
     font-weight: normal;
@@ -95,10 +95,13 @@
     font-stretch: normal;
     letter-spacing: normal;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: "Chronicle Deck",Georgia,Times,"Times New Roman",serif;
 }
 
 .sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
     margin: 16px 30px 14px 0;
+    padding-top: 12px;
 }
 
 .sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe:before {

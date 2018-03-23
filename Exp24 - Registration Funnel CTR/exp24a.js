@@ -1,5 +1,3 @@
-
-
 function changeText() {
     $('.sticky-share-title').text('Making it in America: Revitalizing US manufactoring');
 }
@@ -34,7 +32,7 @@ function stickyBannerTemplate() {
 
     var btnSubscribe = '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="#buttons"></a>';
 
-    var stickyCTA = '<a href="" class="cta">No, thank you</a>';
+    var stickyCTA = '<a href="#" class="cta">No, thank you</a>';
 
 
     $('.article-body-wrapper').append(stickyTemplate);
@@ -42,6 +40,15 @@ function stickyBannerTemplate() {
     $('.sticky-banner-wrapper').append(btnSubscribe);
     $('.sticky-banner-wrapper').append(stickyCTA);
 }
+
+function hideStickyBanner() {
+    $('.sticky-banner').removeClass('show');
+}
+
+$('.sticky-banner-wrapper .cta').click(function(event){
+    event.preventDefault();
+    hideStickyBanner();
+});
 
 $(document).ready(function() {
     changeText();
@@ -58,11 +65,11 @@ $(document).ready(function() {
         }
 
         if(window.scrollY < showSticky) {
-            $('.sticky-banner').removeClass('show');
+            hideStickyBanner();
         }
 
         if(window.scrollY >= hideSticky) {
-            $('.sticky-banner').removeClass('show');
+            hideStickyBanner();
         }
     });
 });
