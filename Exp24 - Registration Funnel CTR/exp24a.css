@@ -127,4 +127,8 @@
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-share-icon.social-contact::before {
         text-indent: 9999px;
     }
+
+    .sticky-banner-container {
+        display: none;
+    }
 }
