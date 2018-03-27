@@ -1,72 +1,52 @@
-
-
-var showSticky = 3000;
-var hideSticky = 13200;
-
 function changeText() {
-    var stickyTitle = document.getElementsByClassName('sticky-share-title')[0];
-
-    stickyTitle.innerText = 'Making it in America: Revitalizing US manufactoring';
-}
-
-
-function removeIcons() {
-    $('.sticky-share figure ul').remove('li');
-}
-
-function addOptions(){
-    var btnSubscribeTemplate = '<li class="subscribe"><a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="#buttons"></a></li>';
-
-    var iconEmail = '<li><a data-capture-key="email" data-show-popup="login-overlay" class="mck-email-icon social-contact" aria-labelledby="email-interactive" target="_blank"></a></li>';
-
-    var iconShare = '<li><a data-capture-key="share-this-article" data-show-popup="login-overlay" class="mck-share-icon social-contact" aria-labelledby="share-interactive" target="_blank"></a></li>';
-
-    var optionsArray = [];
-
-    optionsArray.push(iconEmail);
-    optionsArray.push(iconShare);
-    optionsArray.push(btnSubscribeTemplate);
-    
-    $('.sticky-share figure ul').html(optionsArray.join(''));
+    $('.sticky-share-title').text('Making it in America: Revitalizing US manufactoring');
 }
 
 function stickyBannerTemplate() {
-    var stickyTemplate = '<div class="sticky-banner-container">' +
-                            '<div class="sticky-banner">' +
-                                ' <div class="sticky-banner-outer-wrapper">'+
-                                    '<div class="sticky-banner-wrapper"></div>'+
-                                    '</div>'+
-                                '</div>'+
-                        '</div>';
+    $(document).on('click', '.sticky-drawer-container a.mck-arrow-left-icon', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-    var stickyTitle = '<span class="sticky-banner-title">Nunc ornare nisl ut risus gravida, eu rhoncus</span><a class="mck-arrow-left-icon social-contact" href="#"></a>';
+        $('.sticky-drawer-container').toggleClass('collapse');
 
-    var btnSubscribe = '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="#buttons"></a>';
-
-
-    $('.article-body-wrapper').append(stickyTemplate);
-    $('.sticky-banner-wrapper').append(stickyTitle);
-    $('.sticky-banner-wrapper').append(btnSubscribe);
-
+        return false;
+    });
 }
 
+var visibleY = function(el){
+    var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height, 
+      el = el.parentNode;
+    do {
+      rect = el.getBoundingClientRect();
+      if (top <= rect.bottom === false) return false;
+      // Check if the element is out of view due to a container scrolling
+      if ((top + height) <= rect.top) return false;
+      el = el.parentNode;
+    } while (el != document.body);
+    // Check its within the document viewport
+    return top <= document.documentElement.clientHeight;
+  };
+
 $(document).ready(function(){
-    changeText();
-    removeIcons();
-    addOptions();
     stickyBannerTemplate();
 
     $(window).scroll(function() {
-        if(window.scrollY >= showSticky) {
-            $('.sticky-banner').addClass('show');
-        }
 
-        if(window.scrollY < showSticky) {
-            hideStickyBanner();
-        }
-
-        if(window.scrollY >= hideSticky) {
-            hideStickyBanner();
-        }
+        setTimeout(function() {
+            if ($('.sticky-share-tools').hasClass('_show')) {
+                changeText();
+                $('.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons').removeClass('hidden');
+                $('.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul').first().addClass('hidden');
+                $('.sticky-drawer-container').addClass('show');
+            } else {
+                $('.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul').first().removeClass('hidden');
+                $('.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
+                $('.sticky-drawer-container').removeClass('show');
+            }
+            
+            if( visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul') )) {
+                $('.sticky-drawer-container').removeClass('show');
+            }
+        }, 100);
     });
 });

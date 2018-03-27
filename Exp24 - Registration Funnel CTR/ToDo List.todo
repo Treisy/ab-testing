@@ -1,6 +1,7 @@
 ☐ revisar el espacio a la derecha del button de subscribe en todas las variaciones
 ✔ porque al hacer scroll down and later up el disenno se pierde @done (3/26/2018, 11:30:52 AM)
-☐ Variante#2 revisar el disenno de mobile
+✔ Variante#2 revisar el disenno de mobile @done (3/27/2018, 12:02:03 PM)
 ✔ Variation #0 al cerrar el sticky banner evitar que vaya al inicio de la pagina @done (3/26/2018, 11:30:59 AM)
 ☐ Implementar la funcionalidad del share
 ☐ Implementar la funcionalidad del subscribe
+☐ El texto del header debe ser dinamico, revisar el codigo en el clasico
