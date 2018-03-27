@@ -47,7 +47,7 @@ function stickyBannerTemplate() {
         e.preventDefault();
         e.stopPropagation();
         hideStickyBanner();
-        $('.sticky-banner-container').css('display', 'none');
+        $('.sticky-banner-container').remove();
         return false;
     });
 }
@@ -66,7 +66,7 @@ $(document).ready(function() {
             addOptions();
         }
 
-        if(window.scrollY >= showSticky) {
+        if(window.scrollY >= showSticky ) {
             $('.sticky-banner').addClass('show');
         }
 

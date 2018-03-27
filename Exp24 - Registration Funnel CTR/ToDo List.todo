@@ -1,5 +1,6 @@
-☐ the icons look a little misaligned and small
-✔ the button text has a typo and should be "subscribe" @done (3/19/2018, 9:22:36 AM)
-☐ the button is larger than our styleguide buttons
-☐ the icon labels should be in sans serif font
-
+☐ revisar el espacio a la derecha del button de subscribe en todas las variaciones
+✔ porque al hacer scroll down and later up el disenno se pierde @done (3/26/2018, 11:30:52 AM)
+☐ Variante#2 revisar el disenno de mobile
+✔ Variation #0 al cerrar el sticky banner evitar que vaya al inicio de la pagina @done (3/26/2018, 11:30:59 AM)
+☐ Implementar la funcionalidad del share
+☐ Implementar la funcionalidad del subscribe

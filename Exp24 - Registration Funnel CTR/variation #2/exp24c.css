@@ -1,3 +1,10 @@
+.hidden {
+    display: none;
+}
+
+/* ========================================= */
+/* Header */
+/* ========================================= */
 .sticky-share-tools._show {
     background-image: none;
     background-color: #F7FAFB;
@@ -55,6 +62,117 @@
     width: auto;
 }
 
+/* ========================================= */
+/* Footer */
+/* ========================================= */
+.sticky-banner-container {
+    background-color: #00ADEF;
+    width: 100%;
+    height: 353px;
+    margin-top: 80px;
+}
+
+.sticky-banner-container + .article-closer {
+    margin-top: 0px;
+}
+
+.sticky-banner-container .sticky-banner-outer-wrapper {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
+    color: #FFFFFF;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: "Chronicle Deck",Georgia,Times,"Times New Roman",serif;
+    font-size: 36px;
+    line-height: 1.17;
+    display: block;
+    text-align: center;
+    margin: 104px auto 65px;
+}
+
+.sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
+    border-color: #FFFFFF;
+    height: 41px;
+    width: 124px;
+    padding-top: 12px;
+    margin: 0 auto 101px;
+}
+
+.sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe:before {
+    content: "Subscribe";
+}
+
+/* Footer fixed */
+.sticky-banner-container.fixed {
+    position: fixed;
+    z-index: 105;
+    bottom: 0;
+    left: 0;
+    height: 160px;
+}
+
+.sticky-banner-container.fixed.show {
+    display: block;
+}
+
+.sticky-banner-container.fixed.show .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
+    margin: 30px auto 20px;
+}
+
+.sticky-banner-container.fixed.show .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
+    margin: 0 auto 27px;
+}
+
+.sticky-banner-container.fixed.show .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon {
+    display: block;
+    color: #FFFFFF;
+    position: absolute;
+    right: 39px;
+    top: 30px;
+}
+
+.sticky-banner-container.fixed.show .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon:before {
+    transform: rotate(-90deg);
+    display: inline-block;
+}
+
+/* Footer fixed collapse */
+.sticky-banner-container.fixed.collapse {
+    height: 73px;
+}
+
+.sticky-banner-container.fixed.collapse .sticky-banner-outer-wrapper .sticky-banner-wrapper {
+    flex-direction: row;
+}
+
+.sticky-banner-container.fixed.collapse .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    margin: 27px 0 22px auto;
+}
+
+.sticky-banner-container.fixed.collapse .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
+    margin: 17px auto 13px 30px;
+}
+
+/* ========================================= */
+/* Media queries */
+/* ========================================= */
 @media screen and (max-width: 47.9375em) {
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper {
         margin-left: 29px;
@@ -76,5 +194,9 @@
 
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact {
         padding-right: 20px;
+    }
+
+    .sticky-banner-container {
+        display: none;
     }
 }

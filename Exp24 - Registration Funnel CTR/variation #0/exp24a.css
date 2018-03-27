@@ -1,18 +1,16 @@
 .sticky-share-tools._show {
     background-image: none;
-    background-color: #F7FAFB;
-    box-shadow: 0 3px 10px 0 rgba(220, 220, 220, 0.5);
+    background-color: #FFFFFF;
 }
 
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-email-icon.social-contact,
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-share-icon.social-contact  {
     background-color: transparent;
-    font-size: 24px;
+    font-size: 16px;
     color: #00ADEF;
-    font-weight: normal;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
-    font-family: Sans-serif;
+    font-family: Sans-Serif;
     line-height: normal;
     letter-spacing: normal;
 }
@@ -26,20 +24,25 @@
 }
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact {
-    padding-right: 13px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact:hover {
+    color: #2F71A8;
 }
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact:before {
     color: #00ADEF;
-    top: 18px;
+    top: 17px;
     width: 24.7px;
     height: 23.7px;
 }
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.btn-subscribe {
-    margin-top: 7px;
+    margin-top: 8px;
     font-size: 16px;
-    padding: 13px 11px 12px 11px;
+    padding: 11px 11px 12px 11px;
     width: 124px;
     height: 42px;
     line-height: 1
@@ -53,14 +56,17 @@
     width: auto;
 }
 
+
 .sticky-banner {
     display: none;
-    background-color: #00ADEF;
+    background-color: #FFFFFF;
+    height: 73px;
     position: fixed;
     z-index: 105;
     bottom: 0;
     width: 100%;
     left: 0;
+    border-top: 1px solid #DEE1E0;
 }
 
 .sticky-banner.show{
@@ -75,18 +81,15 @@
 
 .sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper {
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    height: 160px;
 }
 
 .sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
     display: block;
-    text-align: center;
-    margin-top: 30px;
-    font-size: 36px;
-    line-height: 1.17;
-    color: #FFFFFF;
+    text-align: left;
+    margin: 22px 30px 21px 99px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #777777;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -97,29 +100,52 @@
 }
 
 .sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
-    margin: 16px auto 0;
+    margin: 16px 30px 14px 0;
     padding-top: 12px;
-    border-color: #FFFFFF;
-    height: 41px;
-    width: 124px;
 }
 
 .sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe:before {
     content: "Subscribe";
 }
 
-.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper .mck-arrow-left-icon.social-contact::before{
-    color: #FFFFFF;
-    transform: rotate(-90deg);
-    margin-top: 30px;
-    margin-right: 39px;
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper .cta {
+    margin-top: 27px;
+    margin-bottom: 26px;
 }
-
 
 @media screen and (max-width: 47.9375em) {
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper {
-        margin-left: 58px;
-        width: 100%;
-        margin-right: 36px;
+
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-share-icon.social-contact {
+        text-indent: -9999px;
+    }
+
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-share-icon.social-contact::before {
+        text-indent: 9999px;
+    }
+
+    .sticky-banner-container {
+        display: none;
+    }
+
+    .sticky-share-tools _show  .sticky-share-wrapper {
+        margin-left: 0;
+    }
+ 
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul {
+        align-content: flex-end;
+        margin-right: 44px;
+        justify-content: flex-end;
     }
 }
+
+/* @media screen and (max-width: 768px) {
+    .sticky-share-tools _show  .sticky-share-wrapper {
+        margin-left: 0;
+    }
+ 
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul {
+        align-content: flex-end;
+        margin-right: 44px;
+        justify-content: flex-end;
+    }
+ } */
