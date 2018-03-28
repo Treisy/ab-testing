@@ -10,7 +10,7 @@ function stickyBannerTemplate() {
                                 '<div class="sticky-banner-wrapper">' +
                                     '<span class="sticky-banner-title">Nunc ornare nisl ut risus gravida, eu rhoncus</span>' +
                                     '<a class="mck-arrow-left-icon hidden" href="#" name="collapse"></a>'+
-                                    '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="#buttons"></a>' +
+                                    '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="/user-registration/register"></a>' +
                                 '</div>'+
                             '</div>'+
                         '</div>';

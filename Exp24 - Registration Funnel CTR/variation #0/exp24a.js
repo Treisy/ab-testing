@@ -5,23 +5,6 @@ function changeText() {
     $('.sticky-share-title').text('Making it in America: Revitalizing US manufactoring');
 }
 
-function removeIcons() {
-    $('.sticky-share-tools._show').find('.sticky-share figure ul').remove('li');
-}
-
-function addOptions() {
-    var optionsArray = [];
-
-    var btnSubscribeTemplate = '<li class="subscribe"><a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="#buttons"></a></li>';
-
-    var iconShare = '<li><a data-capture-key="share-this-article" data-show-popup="login-overlay" class="mck-share-icon social-contact" aria-labelledby="share-interactive" target="_blank">Share</a></li>';
-
-    optionsArray.push(iconShare);
-    optionsArray.push(btnSubscribeTemplate);
-
-    $('.sticky-share-tools._show').find('.sticky-share figure ul').html(optionsArray.join(''));
-}
-
 function stickyBannerTemplate() {
     var stickyTemplate = '<div class="sticky-banner-container">' +
                             '<div class="sticky-banner">' +
@@ -33,7 +16,7 @@ function stickyBannerTemplate() {
 
     var stickyTitle = '<span class="sticky-banner-title">Stay current on your favorite topics</span>';
 
-    var btnSubscribe = '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="#buttons"></a>';
+    var btnSubscribe = '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="/user-registration/register"></a>';
 
     var stickyCTA = '<a href="javascript:void(0);" class="cta" name="cta">No, thank you</a>';
 
@@ -46,36 +29,49 @@ function stickyBannerTemplate() {
     $(document).on('click', '.sticky-banner-wrapper a.cta', function(e){
         e.preventDefault();
         e.stopPropagation();
-        hideStickyBanner();
         $('.sticky-banner-container').remove();
         return false;
     });
 }
 
-function hideStickyBanner() {
-    $('.sticky-banner').removeClass('show');
-}
+var visibleY = function(el){
+    var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height, 
+      el = el.parentNode;
+    do {
+      rect = el.getBoundingClientRect();
+      if (top <= rect.bottom === false) return false;
+      // Check if the element is out of view due to a container scrolling
+      if ((top + height) <= rect.top) return false;
+      el = el.parentNode;
+    } while (el != document.body);
+    // Check its within the document viewport
+    return top <= document.documentElement.clientHeight;
+  };
 
 $(document).ready(function() {
     stickyBannerTemplate();
     
     $(window).scroll(function() {
-        if ($('.sticky-share-tools').hasClass('_show')) {
-            changeText();
-            removeIcons();
-            addOptions();
-        }
+        setTimeout(function() { 
+            if ($('.sticky-share-tools').hasClass('_show')) {
+                changeText();
+                $('.sticky-share-wrapper .sticky-share ul.new-icons').removeClass('hidden');
+                $('.sticky-share-wrapper .sticky-share ul').first().addClass('hidden');
+            }else {
+                $('.sticky-share-wrapper .sticky-share ul').first().removeClass('hidden');
+                $('.sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
+            }
+    
+            if(window.scrollY >= showSticky ) {
+                $('.sticky-banner').addClass('show');
+            }else {
+                $('.sticky-banner').removeClass('show');
+            }
+    
+            if( visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul') )) {
+                $('.sticky-banner').removeClass('show');
+             }
 
-        if(window.scrollY >= showSticky ) {
-            $('.sticky-banner').addClass('show');
-        }
-
-        if(window.scrollY < showSticky) {
-            hideStickyBanner();
-        }
-
-        if(window.scrollY >= hideSticky) {
-            hideStickyBanner();
-        }
+        },300);
     });
 });
