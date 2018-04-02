@@ -2,7 +2,8 @@ var showSticky = 3000;
 var hideSticky = 13200;
 
 function changeText() {
-    $('.sticky-share-title').text('Making it in America: Revitalizing US manufactoring');
+    var textHeader = $('header h1.headline').text();
+    $('.sticky-share-title').text(textHeader);
 }
 
 function stickyBannerTemplate() {
