@@ -1,6 +1,7 @@
 .sticky-share-tools._show {
     background-image: none;
     background-color: #FFFFFF;
+    box-shadow: 0 3px 10px 0 rgba(220, 220, 220, 0.5);
 }
 
 .article-body-wrapper .sticky-share-container:not(._show) .share ul.new-icons.hidden,
@@ -59,8 +60,47 @@
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li {
     width: auto;
+    position: relative;
 }
 
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container {
+    display: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 4px 0 rgba(205, 205, 205, 0.5);
+    height: 55px;
+    width: 219px;
+    position: absolute;
+    right: -58px;
+    top: 56px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>  .share-container>ul>li {
+    height: 55px;
+    margin-left: 24px;
+    width: 24px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container>ul>li>a.mck-linkedin-icon,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-twitter-icon,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-facebook-icon,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-email-icon {
+    background-color: #FFFFFF;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-linkedin-icon::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-twitter-icon::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-facebook-icon::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-email-icon::before {
+    color: #00ADEF
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container>ul>li>a.mck-linkedin-icon:hover::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-twitter-icon:hover::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-facebook-icon:hover::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-email-icon:hover::before {
+    color: #2F71A8;
+}
 
 .sticky-banner {
     display: none;

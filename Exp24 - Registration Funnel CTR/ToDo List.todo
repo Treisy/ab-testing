@@ -3,5 +3,6 @@
 ✔ Variante#2 revisar el disenno de mobile @done (3/27/2018, 12:02:03 PM)
 ✔ Variation #0 al cerrar el sticky banner evitar que vaya al inicio de la pagina @done (3/26/2018, 11:30:59 AM)
 ☐ Implementar la funcionalidad del share
-☐ Implementar la funcionalidad del subscribe
-☐ El texto del header debe ser dinamico, revisar el codigo en el clasico
+✔ Implementar la funcionalidad del subscribe @done (3/28/2018, 8:10:22 AM)
+✔ El texto del header debe ser dinamico, revisar el codigo en el clasico @done (4/2/2018, 8:38:52 AM)
+✔ Luego de varios scroll mostrar los iconos correctos @done (3/28/2018, 8:10:26 AM)

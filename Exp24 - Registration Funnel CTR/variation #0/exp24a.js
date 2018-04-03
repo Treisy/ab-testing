@@ -49,8 +49,20 @@ var visibleY = function(el){
     return top <= document.documentElement.clientHeight;
   };
 
+function showShare() {
+    $('.new-icons .share-container').hide();
+
+    $(document).on('click', '.new-icons a.mck-share-icon.social-contact', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.share-container').slideToggle();
+        return false;
+    });
+}
+
 $(document).ready(function() {
     stickyBannerTemplate();
+    showShare();
     
     $(window).scroll(function() {
         setTimeout(function() { 
