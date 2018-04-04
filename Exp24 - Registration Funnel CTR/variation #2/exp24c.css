@@ -62,7 +62,47 @@
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li {
     width: auto;
+    position: relative;
 }
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container {
+    display: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 4px 0 rgba(205, 205, 205, 0.5);
+    height: 55px;
+    width: 219px;
+    position: absolute;
+    right: -58px;
+    top: 56px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>  .share-container>ul>li {
+    height: 55px;
+    margin-left: 24px;
+    width: 24px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container>ul>li>a.mck-linkedin-icon,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-twitter-icon,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-facebook-icon,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-email-icon {
+    background-color: #FFFFFF;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-linkedin-icon::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-twitter-icon::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-facebook-icon::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-email-icon::before {
+    color: #00ADEF
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container>ul>li>a.mck-linkedin-icon:hover::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-twitter-icon:hover::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-facebook-icon:hover::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-email-icon:hover::before {
+    color: #2F71A8;
+}
+
 
 /* ========================================= */
 /* Footer */
@@ -177,25 +217,37 @@
 /* ========================================= */
 @media screen and (max-width: 47.9375em) {
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper {
-        margin-left: 29px;
-        width: 100%;
-        margin-right: 47px;
+        margin-left: 0;
     }
 
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-download-icon.social-contact,
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-print-icon.social-contact,
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-share-icon.social-contact {
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li.print {
+        display: block;
+    }
+
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons {
+        align-content: flex-end;
+        margin-right: 15px;
+        justify-content: flex-end;
+    }
+
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-download-icon.social-contact,
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-print-icon.social-contact,
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact {
         text-indent: -9999px;
     }
 
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-download-icon.social-contact::before,
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-print-icon.social-contact::before,
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>.mck-share-icon.social-contact::before {
-        text-indent: 9999px;
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-download-icon.social-contact::before,
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-print-icon.social-contact::before,
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact::before {
+        text-indent: 0;
     }
 
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul>li>a.social-contact {
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.social-contact {
         padding-right: 20px;
+    }
+
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container {
+        right: -69px;
     }
 
     .sticky-banner-container {

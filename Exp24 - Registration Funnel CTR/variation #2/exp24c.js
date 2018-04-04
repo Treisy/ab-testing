@@ -1,7 +1,8 @@
 var showSticky = 3000;
 
 function changeText() {
-    $('.sticky-share-title').text('Making it in America: Revitalizing US manufactoring');
+    var textHeader = $('header h1.headline').text();
+    $('.sticky-share-title').text(textHeader);
 }
 
 function stickyBannerTemplate() {
@@ -43,14 +44,26 @@ var visibleY = function(el){
     return top <= document.documentElement.clientHeight;
   };
 
+function showShare() {
+    $('.new-icons .share-container').hide();
+
+    $(document).on('click', '.new-icons a.mck-share-icon.social-contact', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.share-container').slideToggle();
+        return false;
+    });
+}
+
 $(document).ready(function() {
+    changeText();
     stickyBannerTemplate();
+    showShare();
 
     $(window).scroll(function() {
 
         setTimeout(function() {
             if ($('.sticky-share-tools').hasClass('_show')) {
-                changeText();
                 $('.sticky-share-wrapper .sticky-share ul.new-icons').removeClass('hidden');
                 $('.sticky-share-wrapper .sticky-share ul').first().addClass('hidden');
             } else {
