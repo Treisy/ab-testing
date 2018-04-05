@@ -75,7 +75,7 @@ $(document).ready(function() {
                 $('.sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
             }
     
-            if(window.scrollY >= showSticky ) {
+            if((window.scrollY >= showSticky) || (document.documentElement.scrollTop >= showSticky)) {
                 $('.sticky-banner').addClass('show');
             }else {
                 $('.sticky-banner').removeClass('show');

@@ -47,6 +47,7 @@ $(document).ready(function(){
     showShare();
 
     $(window).on('scroll', function sticky() {
+        
         setTimeout(function() {
             if ($('.sticky-share-tools').hasClass('_show')) {
                 $('.sticky-share-wrapper .sticky-share ul.new-icons').removeClass('hidden');
@@ -56,7 +57,9 @@ $(document).ready(function(){
                 $('.sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
             }
 
-            if(window.scrollY >= showSticky ) {
+            console.log('hola');
+            if((window.scrollY >= showSticky) || document.documentElement.scrollTop >= showSticky )  {
+                console.log('showSticky' + showSticky);
                 $('.sticky-drawer-container').addClass('show');
             }else {
                 $('.sticky-drawer-container').removeClass('show');

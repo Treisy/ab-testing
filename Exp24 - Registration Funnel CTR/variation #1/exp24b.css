@@ -186,7 +186,7 @@
     color: #FFFFFF;
     position: absolute;
     right: 22px;
-    top: 11px;
+    top: 16px;
 }
 
 .sticky-drawer-container a.mck-arrow-left-icon:before {
@@ -231,7 +231,7 @@
     color: #00ADEF;
     height: 41px;
     width: 124px;
-    padding-top: 12px;
+    padding-top: 10px;
     margin: 20px auto 16px;
 }
 
@@ -275,4 +275,10 @@
    .sticky-drawer-container.show {
        display: none;
    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1180px) {
+    .sticky-drawer-container {
+        right: 39px;
+    }
 }
