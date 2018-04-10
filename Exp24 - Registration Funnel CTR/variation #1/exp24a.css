@@ -1,0 +1,119 @@
+/* ========================================= */
+/* Header */
+/* ========================================= */
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact  {
+    background-color: transparent;
+    font-size: 16px;
+    color: #00ADEF;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    font-family: Sans-Serif;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.social-contact {
+    padding-top: 20px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.social-contact:hover {
+    color: #2F71A8;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.social-contact:before {
+    color: #00ADEF;
+    top: 17px;
+    width: 24.7px;
+    height: 23.7px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li {
+    width: auto;
+    position: relative;
+}
+
+
+/* ========================================= */
+/* Footer */
+/* ========================================= */
+
+.sticky-banner {
+    display: none;
+    background-color: #FFFFFF;
+    height: 73px;
+    position: fixed;
+    z-index: 105;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    border-top: 1px solid #DEE1E0;
+}
+
+.sticky-banner.show{
+    display: block;
+}
+
+.sticky-banner .sticky-banner-outer-wrapper {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper {
+    display: flex;
+}
+
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
+    display: block;
+    text-align: left;
+    margin: 22px 30px 21px 99px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #777777;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: "Chronicle Deck",Georgia,Times,"Times New Roman",serif;
+}
+
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
+    margin: 16px 30px 14px 0;
+}
+
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper .cta {
+    margin-top: 27px;
+    margin-bottom: 26px;
+}
+
+/* ========================================= */
+/* Media queries */
+/* ========================================= */
+@media screen and (max-width: 767px) {
+    .sticky-share-tools _show  .sticky-share-wrapper {
+        margin-left: 0;
+    }
+ 
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons {
+        align-content: flex-end;
+        margin-right: 15px;
+        justify-content: flex-end;
+    }
+
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact {
+        text-indent: -9999px;
+    }
+
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact::before {
+        text-indent: 9999px;
+    }
+
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container {
+        right: -69px;
+    }
+
+ }

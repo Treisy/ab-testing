@@ -1,4 +1,5 @@
 var showSticky = 3000;
+var currentScroll;
 
 function changeText() {
     var textHeader = $('header h1.headline').text();
@@ -11,7 +12,7 @@ function stickyBannerTemplate() {
                                 '<div class="sticky-banner-wrapper">' +
                                     '<span class="sticky-banner-title">Nunc ornare nisl ut risus gravida, eu rhoncus</span>' +
                                     '<a class="mck-arrow-left-icon hidden" href="#" name="collapse"></a>'+
-                                    '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="/user-registration/register"></a>' +
+                                    '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="/user-registration/register">Subscribe</a>' +
                                 '</div>'+
                             '</div>'+
                         '</div>';
@@ -51,6 +52,7 @@ function showShare() {
         e.preventDefault();
         e.stopPropagation();
         $('.share-container').slideToggle();
+        currentScroll = document.documentElement.scrollTop;
         return false;
     });
 }
@@ -72,15 +74,26 @@ $(document).ready(function() {
 
             }
 
-            if(window.scrollY >= showSticky && !visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul') )) {
+            if(window.scrollY >= showSticky && !visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
                 $('.sticky-banner-container').addClass('fixed show');
             }
 
-            if( visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul') )) {
+            if(!visibleY(document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
+                $('.sticky-banner-container').addClass('fixed show');
+            }
+
+            if( visibleY(document.querySelector('#main_0_articleShare2_articleActions figure ul') )) {
                 $('.sticky-banner-container').removeClass('fixed show');
             }
 
-            if(window.scrollY < showSticky) {
+            if($('.share-container').css('display') == 'block') {
+
+                if( ((document.documentElement.scrollTop >= (currentScroll + 30)) || ( document.documentElement.scrollTop <= (currentScroll - 30))) ||  ((window.scrollY.scrollTop >= (currentScroll + 30)) || ( window.scrollY.scrollTop <= (currentScroll - 30))) ) {
+                    $('.new-icons .share-container').hide();
+                }
+            }
+
+            if(window.scrollY < showSticky || document.documentElement.scrollTop <= showSticky) {
                 $('.sticky-banner-container').removeClass('fixed show');
             }
 

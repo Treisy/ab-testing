@@ -1,0 +1,214 @@
+/* ========================================= */
+/* Header */
+/* ========================================= */
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-email-icon.social-contact,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact  {
+    background-color: transparent;
+    font-size: 24px;
+    color: #00ADEF;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    font-family: Sans-serif;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.social-contact:before {
+    color: #00ADEF;
+    top: 18px;
+    width: 24.7px;
+    height: 23.7px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.btn-subscribe {
+    margin-top: 7px;
+    font-size: 16px;
+    padding: 13px 11px 12px 11px;
+    width: 124px;
+    height: 42px;
+    line-height: 1
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li {
+    width: auto;
+    position: relative;
+}
+
+
+/* ========================================= */
+/* Footer */
+/* ========================================= */
+.sticky-banner {
+    display: none;
+    background-color: #00ADEF;
+    position: fixed;
+    z-index: 105;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+.sticky-banner.show{
+    display: block;
+}
+
+.sticky-banner .sticky-banner-outer-wrapper {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 160px;
+}
+
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 36px;
+    line-height: 1.17;
+    color: #FFFFFF;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: "Chronicle Deck",Georgia,Times,"Times New Roman",serif;
+}
+
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
+    margin: 16px auto 0;
+    border-color: #FFFFFF;
+}
+
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper .mck-arrow-left-icon.social-contact::before{
+    color: #FFFFFF;
+    transform: rotate(-90deg);
+    margin-top: 30px;
+    margin-right: 39px;
+}
+
+/* ========================================= */
+/* Footer */
+/* ========================================= */
+.sticky-drawer-container {
+    height: 179px;
+    width: 288px;
+    position: fixed;
+    background-color: #00ADEF;
+    bottom: 0;
+    right: 98px;
+    display: none;
+}
+
+.sticky-drawer-container.show {
+    display: block;
+}
+
+.sticky-drawer-container a.mck-arrow-left-icon {
+    color: #FFFFFF;
+    position: absolute;
+    right: 22px;
+    top: 16px;
+}
+
+.sticky-drawer-container a.mck-arrow-left-icon:before {
+    transform: rotate(-90deg);
+    display: inline-block;
+}
+
+.sticky-drawer-container .sticky-drawer-wrapper {
+    text-align: center;
+}
+
+.sticky-drawer-container .sticky-drawer-wrapper .sticky-drawer-title {
+    font-family: "ChronicleSSm";
+    font-size: 20px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    margin-top: 11px;
+    margin-left: 22px;
+}
+
+.sticky-drawer-container .sticky-drawer-wrapper .sticky-drawer-text {
+    font-family: "ChronicleSSm";
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    margin: 0 0 0 22px;
+}
+
+.sticky-drawer-container .sticky-drawer-wrapper a.btn-subscribe {
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #00ADEF;
+    height: 41px;
+    width: 124px;
+    padding-top: 10px;
+    margin: 20px auto 16px;
+}
+
+.sticky-drawer-container .sticky-drawer-wrapper a.btn-subscribe:hover {
+    color: #2F71A8;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li {
+    margin-right: 10px;
+}
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li.subscribe {
+    margin-right: 0;
+}
+
+/* Footer collapse */
+.sticky-drawer-container.collapse {
+    height: 50px;
+}
+
+.sticky-drawer-container.collapse a.mck-arrow-left-icon:before {
+    transform: rotate(90deg);
+    display: inline-block;
+}
+
+/* ========================================= */
+/* Media queries */
+/* ========================================= */
+@media screen and (max-width: 767px) {
+   .sticky-share-tools _show  .sticky-share-wrapper {
+       margin-left: 0;
+   }
+
+   .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons {
+       align-content: flex-end;
+       margin-right: 15px;
+       justify-content: flex-end;
+   }
+
+   .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container {
+        right: -69px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+    .sticky-drawer-container {
+        right: 39px;
+    }
+}
