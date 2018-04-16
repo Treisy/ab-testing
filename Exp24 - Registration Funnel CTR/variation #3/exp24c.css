@@ -22,15 +22,6 @@
     height: 23.7px;
 }
 
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.btn-subscribe {
-    margin-top: 7px;
-    font-size: 16px;
-    padding: 13px 11px 12px 11px;
-    width: 124px;
-    height: 42px;
-    line-height: 1
-}
-
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li {
     width: auto;
     position: relative;
@@ -139,7 +130,7 @@
     letter-spacing: normal;
     text-align: left;
     margin-top: 11px;
-    margin-left: 22px;
+    margin-left: 25px;
 }
 
 .sticky-drawer-container .sticky-drawer-wrapper .sticky-drawer-text {
@@ -152,16 +143,13 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
-    margin: 0 0 0 22px;
+    margin: 0 25px;
 }
 
 .sticky-drawer-container .sticky-drawer-wrapper a.btn-subscribe {
     border-color: #FFFFFF;
     background-color: #FFFFFF;
     color: #00ADEF;
-    height: 41px;
-    width: 124px;
-    padding-top: 10px;
     margin: 20px auto 16px;
 }
 

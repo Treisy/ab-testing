@@ -8,6 +8,16 @@ function changeText() {
 }
 
 function stickyBannerTemplate() {
+    var template = '<div class="sticky-banner-container">'+
+                        '<div class="sticky-banner">'+
+                            '<div class="sticky-banner-outer-wrapper">'+
+                                '<div class="sticky-banner-wrapper"><span class="sticky-banner-title">Stay current on your favorite topics</span>'+
+                                '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="/user-registration/register">Subscribe</a><a href="javascript:void(0);" class="cta" name="cta" style="">No, thank you</a></div>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>';
+    $('main').after(template);
+
     $(document).on('click', '.sticky-banner-wrapper a.cta', function(e){
         e.preventDefault();
         e.stopPropagation();

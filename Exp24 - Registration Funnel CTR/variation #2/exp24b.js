@@ -74,8 +74,17 @@ $(document).ready(function() {
 
             }
 
+            console.log('===============================================================');
+            console.log('scrollY => ' + window.scrollY);
+            console.log('document => '+ document.querySelector('#main_0_articleShare2_articleActions figure ul'));
+            console.log('visible => ' + !visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul')));
+            console.log('===============================================================');
+
             if(window.scrollY >= showSticky && !visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
-                $('.sticky-banner-container').addClass('fixed show');
+                console.log('add class');
+                // $('.sticky-banner-container').addClass('fixed show');
+                $('.sticky-banner-container').addClass('fixed');
+                $('.sticky-banner-container').addClass('show');
             }
 
             if(!visibleY(document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
