@@ -1,5 +1,6 @@
 var showSticky = 3000;
 var currentScroll;
+var scrollShare;
 
 function changeText() {
     var textHeader = $('header h1.headline').text();
@@ -12,7 +13,7 @@ function stickyHeaderTemplate() {
                 '<li class="print"><a data-capture-key="print-this-article" data-show-popup="login-overlay" class="interactive-link show-popup mck-print-icon social-contact print-this-article" aria-labelledby="open-interactive" target="_blank">Print</a></li>'+
                 '<li>'+
                     '<a data-capture-key="share-this-article" data-show-popup="login-overlay" class="mck-share-icon social-contact" aria-labelledby="share-interactive">Share</a>'+
-                    '<div class="share-container">'+
+                    '<div class="share-container hidden">'+
                         '<ul>'+
                             '<li><a href="#0" class="mck-linkedin-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on LinkedIn</span></a></li>'+
                             '<li><a href="#0" class="mck-twitter-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Twitter</span></a></li>'+
@@ -66,18 +67,6 @@ var visibleY = function(el){
     return top <= document.documentElement.clientHeight;
   };
 
-function showShare() {
-    $('.new-icons .share-container').hide();
-
-    $(document).on('click', '.new-icons a.mck-share-icon.social-contact', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        $('.share-container').slideToggle();
-        currentScroll = document.documentElement.scrollTop;
-        return false;
-    });
-}
-
 $(document).ready(function() {
     changeText();
     stickyBannerTemplate();
@@ -115,7 +104,7 @@ $(document).ready(function() {
 
             if($('.share-container').css('display') == 'block') {
 
-                if( (currentScroll >= (currentScroll + 30)) || (currentScroll <= (currentScroll - 30)) ) {
+                if( (currentScroll >= (scrollShare + 30)) || (currentScroll <= (scrollShare - 30)) ) {
                     $('.new-icons .share-container').hide();
                 }
             }

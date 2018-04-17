@@ -157,14 +157,6 @@
     color: #2F71A8;
 }
 
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li {
-    margin-right: 10px;
-}
-
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li.subscribe {
-    margin-right: 0;
-}
-
 /* Footer collapse */
 .sticky-drawer-container.collapse {
     height: 50px;

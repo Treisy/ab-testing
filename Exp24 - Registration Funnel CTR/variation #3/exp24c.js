@@ -1,5 +1,6 @@
 var showSticky = 3000;
 var currentScroll;
+var scrollShare;
 
 function changeText() {
     var textHeader = $('header h1.headline').text();
@@ -11,7 +12,7 @@ function stickyHeaderTemplate() {
             '<li><a href="mailto:?subject=From%20mckinsey.com%3a%20An%20agenda%20for%20the%20talent-first%20CEO&amp;body=I%20recommend%20you%20visit%20mckinsey.com%20to%20read%3a%0d%0a%0d%0aAn%20agenda%20for%20the%20talent-first%20CEO%0d%0ahttp%3a%2f%2fwww.mckinsey.com%2fbusiness-functions%2forganization%2four-insights%2fan-agenda-for-the-talent-first-ceo%3fcid%3deml-web" data-capture-key="email" data-show-popup="login-overlay" class="mck-email-icon social-contact" aria-labelledby="email-interactive"></a></li>'+
             '<li>'+
                 '<a data-capture-key="share-this-article" data-show-popup="login-overlay" class="mck-share-icon social-contact" aria-labelledby="share-interactive"></a>'+
-                '<div class="share-container">'+
+                '<div class="share-container hidden">'+
                     '<ul>'+
                         '<li><a href="#0" class="mck-linkedin-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on LinkedIn</span></a></li>'+
                         '<li><a href="#0" class="mck-twitter-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Twitter</span></a></li>'+
@@ -51,18 +52,6 @@ var visibleY = function(el){
     return top <= document.documentElement.clientHeight;
   };
 
-function showShare() {
-    $('.new-icons .share-container').hide();
-
-    $(document).on('click', '.new-icons a.mck-share-icon.social-contact', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        $('.share-container').slideToggle();
-        currentScroll = document.documentElement.scrollTop;
-        return false;
-    });
-}
-
 $(document).ready(function(){
     changeText();
     stickyBannerTemplate();
@@ -91,9 +80,9 @@ $(document).ready(function(){
                 $('.sticky-drawer-container').removeClass('show');
             }
 
-            if($('.share-container').css('display') == 'block') {
+            if(!$('.share-container').hasClass('hidden')) {
 
-                if( (currentScroll >= (currentScroll + 30)) || (currentScroll <= (currentScroll - 30)) ){
+                if( (currentScroll >= (scrollShare + 30)) || (currentScroll <= (scrollShare - 30)) ){
                     $('.new-icons .share-container').hide();
                 }
             }
