@@ -44,13 +44,12 @@
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.btn-subscribe,
 .sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe,
 .sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe,
-.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe,
- {
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
     margin: 8px 0;
     font-size: 16px;
     padding: 12px 15px;
-    width: 114px;
-    min-width: 114px;
+    width: 124px;
+    min-width: 124px;
     height: 40px;
     line-height: 1
 }

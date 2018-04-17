@@ -6,6 +6,27 @@ function changeText() {
     $('.sticky-share-title').text(textHeader);
 }
 
+function stickyHeaderTemplate() {
+    var templateHeader = '<ul class="new-icons hidden">'+
+                '<li><a href="/~/media/McKinsey/Business Functions/Organization/Our Insights/The agenda of a talen first CEO/An-agenda-for-the-talent-first-CEO.ashx" data-capture-key="download-this-article" rel="nofollow" data-show-popup="login-overlay" class="mck-download-icon social-contact" aria-labelledby="open-interactive" target="_blank">Download<span class="visually-hidden">Download this article</span></a></li>'+
+                '<li class="print"><a data-capture-key="print-this-article" data-show-popup="login-overlay" class="interactive-link show-popup mck-print-icon social-contact print-this-article" aria-labelledby="open-interactive" target="_blank">Print</a></li>'+
+                '<li>'+
+                    '<a data-capture-key="share-this-article" data-show-popup="login-overlay" class="mck-share-icon social-contact" aria-labelledby="share-interactive">Share</a>'+
+                    '<div class="share-container">'+
+                        '<ul>'+
+                            '<li><a href="#0" class="mck-linkedin-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on LinkedIn</span></a></li>'+
+                            '<li><a href="#0" class="mck-twitter-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Twitter</span></a></li>'+
+                            '<li><a href="#0" class="mck-facebook-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Facebook</span></a></li>'+
+                            '<li><a href="mailto:?subject=From%20mckinsey.com%3a%20An%20agenda%20for%20the%20talent-first%20CEO&amp;body=I%20recommend%20you%20visit%20mckinsey.com%20to%20read%3a%0d%0a%0d%0aAn%20agenda%20for%20the%20talent-first%20CEO%0d%0ahttp%3a%2f%2fwww.mckinsey.com%2fbusiness-functions%2forganization%2four-insights%2fan-agenda-for-the-talent-first-ceo%3fcid%3deml-web" class="mck-email-icon" role="button"><span class="visually-hidden">Email this article</span></a></li>'+
+                        '</ul>'+
+                    '</div>'+
+                '</li>'+
+                '<li class="subscribe"><a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="/user-registration/register">Subscribe</a></li>'+
+            '</ul>';
+
+    $('.sticky-share-wrapper .sticky-share ul').after(templateHeader);
+}
+
 function stickyBannerTemplate() {
     var stickyTemplate = '<div class="sticky-banner-container">' +
                             '<div class="sticky-banner-outer-wrapper">'+
@@ -60,12 +81,18 @@ function showShare() {
 $(document).ready(function() {
     changeText();
     stickyBannerTemplate();
+    stickyHeaderTemplate();
     showShare();
 
     $(window).scroll(function() {
 
         setTimeout(function() {
+            currentScroll = window.scrollY || document.documentElement.scrollTop;
+
             if ($('.sticky-share-tools').hasClass('_show')) {
+                if( $('.sticky-share-wrapper .sticky-share ul.new-icons').length === 0 ) {
+                    stickyHeaderTemplate();
+                }
                 $('.sticky-share-wrapper .sticky-share ul.new-icons').removeClass('hidden');
                 $('.sticky-share-wrapper .sticky-share ul').first().addClass('hidden');
             } else {
@@ -74,17 +101,8 @@ $(document).ready(function() {
 
             }
 
-            console.log('===============================================================');
-            console.log('scrollY => ' + window.scrollY);
-            console.log('document => '+ document.querySelector('#main_0_articleShare2_articleActions figure ul'));
-            console.log('visible => ' + !visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul')));
-            console.log('===============================================================');
-
-            if(window.scrollY >= showSticky && !visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
-                console.log('add class');
-                // $('.sticky-banner-container').addClass('fixed show');
-                $('.sticky-banner-container').addClass('fixed');
-                $('.sticky-banner-container').addClass('show');
+            if(currentScroll >= showSticky && !visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
+                $('.sticky-banner-container').addClass('fixed show');
             }
 
             if(!visibleY(document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
@@ -97,12 +115,12 @@ $(document).ready(function() {
 
             if($('.share-container').css('display') == 'block') {
 
-                if( ((document.documentElement.scrollTop >= (currentScroll + 30)) || ( document.documentElement.scrollTop <= (currentScroll - 30))) ||  ((window.scrollY.scrollTop >= (currentScroll + 30)) || ( window.scrollY.scrollTop <= (currentScroll - 30))) ) {
+                if( (currentScroll >= (currentScroll + 30)) || (currentScroll <= (currentScroll - 30)) ) {
                     $('.new-icons .share-container').hide();
                 }
             }
 
-            if(window.scrollY < showSticky || document.documentElement.scrollTop <= showSticky) {
+            if(currentScroll < showSticky) {
                 $('.sticky-banner-container').removeClass('fixed show');
             }
 
