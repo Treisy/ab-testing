@@ -25,9 +25,9 @@
     width: 24px;
 }
 
-/* .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li {
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li {
     margin-right: 30px;
-} */
+}
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li.subscribe {
     margin-right: 0;
@@ -53,6 +53,21 @@
     height: 40px;
     line-height: 1
 }
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.mck-download-icon.social-contact:hover,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.mck-print-icon.social-contact:hover,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.mck-share-icon.social-contact:hover,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.mck-email-icon.social-contact:hover,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.mck-download-icon.social-contact:hover::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.mck-print-icon.social-contact:hover::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.mck-share-icon.social-contact:hover::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.mck-email-icon.social-contact:hover::before {
+    color: #2F71A8;
+}
+
+/* ========================================= */
+/* Share container styles */
+/* ========================================= */
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container {
     overflow: hidden;
@@ -90,7 +105,7 @@
     color: #00ADEF
 }
 
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container>ul>li>a.mck-linkedin-icon:hover::before,
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-linkedin-icon:hover::before,
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-twitter-icon:hover::before,
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-facebook-icon:hover::before,
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li .share-container>ul>li>a.mck-email-icon:hover::before {

@@ -18,10 +18,6 @@
     padding-top: 20px;
 }
 
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.social-contact:hover {
-    color: #2F71A8;
-}
-
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.social-contact:before {
     color: #00ADEF;
     top: 17px;

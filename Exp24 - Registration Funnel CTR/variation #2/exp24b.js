@@ -53,6 +53,23 @@ function stickyBannerTemplate() {
     });
 }
 
+function showShare() {
+    $(document).on('click', '.new-icons a.mck-share-icon.social-contact', function(e){
+        var shareContainer = document.querySelector('.share-container');
+        
+        e.preventDefault();
+        e.stopPropagation();
+
+        shareContainer.classList.toggle('hidden');
+
+        if ( !$('.new-icons .share-container').hasClass('hidden') ) {
+            scrollShare = document.documentElement.scrollTop;
+        }
+
+        return false;
+    });
+};
+
 var visibleY = function(el){
     var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height, 
       el = el.parentNode;
@@ -102,10 +119,11 @@ $(document).ready(function() {
                 $('.sticky-banner-container').removeClass('fixed show');
             }
 
-            if($('.share-container').css('display') == 'block') {
-
-                if( (currentScroll >= (scrollShare + 30)) || (currentScroll <= (scrollShare - 30)) ) {
-                    $('.new-icons .share-container').hide();
+            if ( !$('.new-icons .share-container').hasClass('hidden') ) {
+                maxSharePos = scrollShare + 30;
+                minSharePos = scrollShare - 30;
+                if( (currentScroll >= maxSharePos) || (currentScroll <= minSharePos) ) {
+                    $('.new-icons .share-container').addClass('hidden');
                 }
             }
 

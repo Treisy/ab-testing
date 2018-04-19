@@ -3,7 +3,6 @@ var hideSticky = 13200;
 var currentScroll;
 var scrollShare;
 
-
 function changeText() {
     var textHeader = $('header h1.headline').text();
     $('.sticky-share-title').text(textHeader);
@@ -46,7 +45,22 @@ function stickyBannerTemplate() {
         return false;
     });
 }
+function showShare() {
+    $(document).on('click', '.new-icons a.mck-share-icon.social-contact', function(e){
+        var shareContainer = document.querySelector('.share-container');
+        
+        e.preventDefault();
+        e.stopPropagation();
 
+        shareContainer.classList.toggle('hidden');
+
+        if ( !$('.new-icons .share-container').hasClass('hidden') ) {
+            scrollShare = document.documentElement.scrollTop;
+        }
+
+        return false;
+    });
+};
 var visibleY = function(el){
     var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height, 
       el = el.parentNode;
@@ -65,11 +79,12 @@ $(document).ready(function() {
     stickyBannerTemplate();
     stickyHeaderTemplate();
     showShare();
+    authorsSpacing();
     
     $(window).scroll(function() {
+        currentScroll = window.scrollY || document.documentElement.scrollTop;
+        
         setTimeout(function() { 
-            currentScroll = window.scrollY || document.documentElement.scrollTop;
-
             if ($('.sticky-share-tools').hasClass('_show')) {
                 if( $('.sticky-share-wrapper .sticky-share ul.new-icons').length === 0 ) {
                     stickyHeaderTemplate();
@@ -87,11 +102,12 @@ $(document).ready(function() {
             }else {
                 $('.sticky-banner').removeClass('show');
             }
-
-            if($('.share-container').css('display') == 'block') {
-
-                if( (currentScroll >= (scrollShare + 30)) || (currentScroll <= (scrollShare - 30)) ) {
-                    $('.new-icons .share-container').hide();
+            
+            if ( !$('.new-icons .share-container').hasClass('hidden') ) {
+                maxSharePos = scrollShare + 30;
+                minSharePos = scrollShare - 30;
+                if( (currentScroll >= maxSharePos) || (currentScroll <= minSharePos) ) {
+                    $('.new-icons .share-container').addClass('hidden');
                 }
             }
     

@@ -38,6 +38,23 @@ function stickyBannerTemplate() {
     });
 }
 
+function showShare() {
+    $(document).on('click', '.new-icons a.mck-share-icon.social-contact', function(e){
+        var shareContainer = document.querySelector('.share-container');
+        
+        e.preventDefault();
+        e.stopPropagation();
+
+        shareContainer.classList.toggle('hidden');
+
+        if ( !$('.new-icons .share-container').hasClass('hidden') ) {
+            scrollShare = document.documentElement.scrollTop;
+        }
+
+        return false;
+    });
+};
+
 var visibleY = function(el){
     var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height, 
       el = el.parentNode;
@@ -50,7 +67,7 @@ var visibleY = function(el){
     } while (el != document.body);
     // Check its within the document viewport
     return top <= document.documentElement.clientHeight;
-  };
+  }
 
 $(document).ready(function(){
     changeText();
@@ -80,10 +97,11 @@ $(document).ready(function(){
                 $('.sticky-drawer-container').removeClass('show');
             }
 
-            if(!$('.share-container').hasClass('hidden')) {
-
-                if( (currentScroll >= (scrollShare + 30)) || (currentScroll <= (scrollShare - 30)) ){
-                    $('.new-icons .share-container').hide();
+            if ( !$('.new-icons .share-container').hasClass('hidden') ) {
+                maxSharePos = scrollShare + 30;
+                minSharePos = scrollShare - 30;
+                if( (currentScroll >= maxSharePos) || (currentScroll <= minSharePos) ) {
+                    $('.new-icons .share-container').addClass('hidden');
                 }
             }
             

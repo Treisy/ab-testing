@@ -1,12 +1,8 @@
-window.showShare = function() {
-    $(document).on('click', '.new-icons a.mck-share-icon.social-contact', function(e){
-        var shareContainer = document.querySelector('.share-container');
-        
-        e.preventDefault();
-        e.stopPropagation();
+window.authorsSpacing = function() {
+    var aside = document.querySelector('aside.signup-promo');
+    var footer = document.querySelector('footer.about-authors');
 
-        shareContainer.classList.toggle('hidden');
-        scrollShare = document.documentElement.scrollTop;
-        return false;
-    });
+    if ( $(aside).css('display') == 'none' ) {
+        footer.classList.remove('signupAboveAboutAuthor');
+    }
 };
