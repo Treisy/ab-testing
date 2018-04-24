@@ -1,3 +1,9 @@
+.sticky-share-tools._show {
+    background-image: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 10px 0 rgba(220, 220, 220, 0.5);
+}
+
 /* ========================================= */
 /* Header */
 /* ========================================= */
@@ -128,7 +134,7 @@
     font-size: 18px;
     line-height: 1.5;
     text-align: left;
-    margin: 27px 0 22px auto;
+    margin: 23px 0 22px auto;
 }
 
 .sticky-banner-container.fixed.collapse .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
