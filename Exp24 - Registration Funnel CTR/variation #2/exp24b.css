@@ -87,6 +87,10 @@
     margin: 0 auto 101px;
 }
 
+.sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon.hidden {
+    display: none;
+}
+
 /* Footer fixed */
 .sticky-banner-container.fixed {
     position: fixed;
@@ -160,13 +164,14 @@
     }
 
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-download-icon.social-contact,
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-print-icon.social-contact,
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-print-icon.social-contact {
+        display: none;
+    }
+
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact {
         text-indent: -9999px;
     }
 
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-download-icon.social-contact::before,
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-print-icon.social-contact::before,
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact::before {
         text-indent: 0;
     }

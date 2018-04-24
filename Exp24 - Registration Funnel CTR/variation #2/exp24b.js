@@ -3,11 +3,16 @@ var currentScroll;
 var scrollShare;
 
 function changeText() {
-    var textHeader = $('header h1.headline').text();
-    $('.sticky-share-title').text(textHeader);
+    var title = $('header h1.headline').text();
+    $('.sticky-share-title').text(title);
 }
 
 function stickyHeaderTemplate() {
+    var articleTitle = $('header h1.headline').text();
+    var subject = 'From mckinsey.com: ' + articleTitle;
+    var urlArticle = window.location.protocol + window.location.hostname + window.location.pathname;
+    var body = 'I recommend you visit mckinsey.com to read:' + '\n\n' + articleTitle + '\n' + urlArticle;
+
     var templateHeader = '<ul class="new-icons hidden">'+
                 '<li><a href="/~/media/McKinsey/Business Functions/Organization/Our Insights/The agenda of a talen first CEO/An-agenda-for-the-talent-first-CEO.ashx" data-capture-key="download-this-article" rel="nofollow" data-show-popup="login-overlay" class="mck-download-icon social-contact" aria-labelledby="open-interactive" target="_blank">Download<span class="visually-hidden">Download this article</span></a></li>'+
                 '<li class="print"><a data-capture-key="print-this-article" data-show-popup="login-overlay" class="interactive-link show-popup mck-print-icon social-contact print-this-article" aria-labelledby="open-interactive" target="_blank">Print</a></li>'+
@@ -18,7 +23,7 @@ function stickyHeaderTemplate() {
                             '<li><a href="#0" class="mck-linkedin-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on LinkedIn</span></a></li>'+
                             '<li><a href="#0" class="mck-twitter-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Twitter</span></a></li>'+
                             '<li><a href="#0" class="mck-facebook-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Facebook</span></a></li>'+
-                            '<li><a href="mailto:?subject=From%20mckinsey.com%3a%20An%20agenda%20for%20the%20talent-first%20CEO&amp;body=I%20recommend%20you%20visit%20mckinsey.com%20to%20read%3a%0d%0a%0d%0aAn%20agenda%20for%20the%20talent-first%20CEO%0d%0ahttp%3a%2f%2fwww.mckinsey.com%2fbusiness-functions%2forganization%2four-insights%2fan-agenda-for-the-talent-first-ceo%3fcid%3deml-web" class="mck-email-icon" role="button"><span class="visually-hidden">Email this article</span></a></li>'+
+                            '<li><a href="mailto:?subject='+ subject +  '&amp;body=' + encodeURIComponent(body)  + '" class="mck-email-icon" role="button"><span class="visually-hidden">Email this article</span></a></li>'+
                         '</ul>'+
                     '</div>'+
                 '</li>'+
@@ -85,7 +90,6 @@ var visibleY = function(el){
   };
 
 $(document).ready(function() {
-    changeText();
     stickyBannerTemplate();
     stickyHeaderTemplate();
     showShare();
@@ -98,6 +102,7 @@ $(document).ready(function() {
             if( $('.sticky-share-wrapper .sticky-share ul.new-icons').length === 0 ) {
                 stickyHeaderTemplate();
             }
+            changeText();
             $('.sticky-share-wrapper .sticky-share ul.new-icons').removeClass('hidden');
             $('.sticky-share-wrapper .sticky-share ul').first().addClass('hidden');
         } else {

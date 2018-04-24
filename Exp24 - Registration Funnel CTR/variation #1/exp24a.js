@@ -9,6 +9,11 @@ function changeText() {
 }
 
 function stickyHeaderTemplate() {
+    var articleTitle = $('header h1.headline').text();
+    var subject = 'From mckinsey.com: ' + articleTitle;
+    var urlArticle = window.location.protocol + window.location.hostname + window.location.pathname;
+    var body = 'I recommend you visit mckinsey.com to read:' + '\n\n' + articleTitle + '\n' + urlArticle;
+
     var templateHeader = '<ul class="new-icons hidden">'+
                             '<li>'+
                                 '<a data-capture-key="share-this-article" data-show-popup="login-overlay" class="mck-share-icon social-contact" aria-labelledby="share-interactive">Share</a>'+
@@ -17,7 +22,7 @@ function stickyHeaderTemplate() {
                                         '<li><a href="#0" class="mck-linkedin-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on LinkedIn</span></a></li>'+
                                         '<li><a href="#0" class="mck-twitter-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Twitter</span></a></li>'+
                                         '<li><a href="#0" class="mck-facebook-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Facebook</span></a></li>'+
-                                        '<li><a href="mailto:?subject=From%20mckinsey.com%3a%20An%20agenda%20for%20the%20talent-first%20CEO&amp;body=I%20recommend%20you%20visit%20mckinsey.com%20to%20read%3a%0d%0a%0d%0aAn%20agenda%20for%20the%20talent-first%20CEO%0d%0ahttp%3a%2f%2fwww.mckinsey.com%2fbusiness-functions%2forganization%2four-insights%2fan-agenda-for-the-talent-first-ceo%3fcid%3deml-web" class="mck-email-icon" role="button"><span class="visually-hidden">Email this article</span></a></li>'+
+                                        '<li><a href="mailto:?subject='+ subject +  '&amp;body=' + encodeURIComponent(body)  + '" class="mck-email-icon" role="button"><span class="visually-hidden">Email this article</span></a></li>'+
                                     '</ul>'+
                                 '</div>'+
                             '</li>'+
