@@ -65,7 +65,8 @@ function showShare() {
 
         return false;
     });
-};
+}
+
 var visibleY = function(el){
     var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height, 
       el = el.parentNode;
@@ -82,7 +83,7 @@ var visibleY = function(el){
 
 $(document).ready(function() {
     stickyBannerTemplate();
-    stickyHeaderTemplate();
+    //stickyHeaderTemplate();
     showShare();
     authorsSpacing();
     
@@ -98,6 +99,11 @@ $(document).ready(function() {
             $('.sticky-share-wrapper .sticky-share ul').first().addClass('hidden');
         }else {
             $('.sticky-share-wrapper .sticky-share ul').first().removeClass('hidden');
+            // $('.sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
+            $('.sticky-share-wrapper .sticky-share ul.new-icons').remove();
+        }
+
+        if( visibleY( document.querySelectorAll('.sticky-share aside figure ul')[0] )) {
             $('.sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
         }
 

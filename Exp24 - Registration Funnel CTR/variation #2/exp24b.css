@@ -98,21 +98,18 @@
     bottom: 0;
     left: 0;
     height: 160px;
+    
 }
 
-.sticky-banner-container.fixed.show {
-    display: block;
-}
-
-.sticky-banner-container.fixed.show .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
+.sticky-banner-container.fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
     margin: 30px auto 20px;
 }
 
-.sticky-banner-container.fixed.show .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
+.sticky-banner-container.fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
     margin: 0 auto 27px;
 }
 
-.sticky-banner-container.fixed.show .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon {
+.sticky-banner-container.fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon {
     display: block;
     color: #FFFFFF;
     position: absolute;
@@ -120,7 +117,7 @@
     top: 30px;
 }
 
-.sticky-banner-container.fixed.show .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon:before {
+.sticky-banner-container.fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon:before {
     transform: rotate(-90deg);
     display: inline-block;
 }
