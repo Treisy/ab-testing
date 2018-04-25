@@ -3,6 +3,8 @@ var currentScroll;
 var scrollShare;
 var downloadUrl;
 
+var stickyShareContainer;
+
 function changeText() {
     var title = $('header h1.headline').text();
     $('.sticky-share-title').text(title);
@@ -14,7 +16,6 @@ function stickyHeaderTemplate(downloadUrl) {
     var urlArticle = window.location.protocol + window.location.hostname + window.location.pathname;
     var body = 'I recommend you visit mckinsey.com to read:' + '\n\n' + articleTitle + '\n' + urlArticle;
 
-    console.log('download->'+downloadUrl);
     var templateHeader = '<ul class="new-icons hidden">'+
                 '<li><a href="' + downloadUrl + '" data-capture-key="download-this-article" rel="nofollow" data-show-popup="login-overlay" class="interactive-link show-popup mck-download-icon social-contact download-this-article" aria-labelledby="open-interactive" target="_blank">Download<span class="visually-hidden">Download this article</span></a></li>'+
                 '<li class="print"><a data-capture-key="print-this-article" data-show-popup="login-overlay" class="interactive-link show-popup mck-print-icon social-contact print-this-article" aria-labelledby="open-interactive" target="_blank">Print</a></li>'+
@@ -93,7 +94,7 @@ var visibleY = function(el){
 
 $(document).ready(function() {
     downloadUrl = document.querySelector('.sticky-share aside figure ul li#main_0_articleShare_liArticlePdf_b a').href;
-    console.log('ready->'+downloadUrl);
+
     stickyBannerTemplate();
     stickyHeaderTemplate(downloadUrl);
     showShare();
@@ -102,8 +103,15 @@ $(document).ready(function() {
 
         currentScroll = window.scrollY || document.documentElement.scrollTop;
 
+        if( visibleY(document.querySelector('.article-hero-wrapper')) && $('.sticky-share-wrapper .sticky-share ul.new-icons').length > 0) {
+            stickyShareContainer = document.querySelector('.sticky-share-wrapper .sticky-share ul.new-icons');
+            stickyShareContainer.classList.add('hidden');
+        }
+
         if ($('.sticky-share-tools').hasClass('_show')) {
+            console.log('show');
             if( $('.sticky-share-wrapper .sticky-share ul.new-icons').length === 0 ) {
+                console.log('create');
                 stickyHeaderTemplate(downloadUrl);
             }
             changeText();
@@ -112,7 +120,6 @@ $(document).ready(function() {
         } else {
             $('.sticky-share-wrapper .sticky-share ul').first().removeClass('hidden');
             $('.sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
-
         }
 
         if(currentScroll >= showSticky && !visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
@@ -136,7 +143,7 @@ $(document).ready(function() {
         }
 
         if(currentScroll < showSticky) {
-            $('.sticky-banner-container').removeClass('fixed show');
+            $('.sticky-banner-container').removeClass('fixed');
         }
         
     });
