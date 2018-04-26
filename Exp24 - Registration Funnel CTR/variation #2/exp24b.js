@@ -37,25 +37,38 @@ function stickyHeaderTemplate(downloadUrl) {
 }
 
 function stickyBannerTemplate() {
-    var stickyTemplate = '<div class="sticky-banner-container">' +
-                            '<div class="sticky-banner-outer-wrapper">'+
-                                '<div class="sticky-banner-wrapper">' +
-                                    '<span class="sticky-banner-title">Nunc ornare nisl ut risus gravida, eu rhoncus</span>' +
-                                    '<a class="mck-arrow-left-icon hidden" href="#" name="collapse"></a>'+
-                                    '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="/user-registration/register">Subscribe</a>' +
-                                '</div>'+
-                            '</div>'+
-                        '</div>';
+    var stickyBannerTitle = 'Nunc ornare nisl ut risus gravida, eu rhoncus';
+    var stickyBannerSubscribe = '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="/user-registration/register">Subscribe</a>';
 
-    $('main').after(stickyTemplate);
+    var stickyBannerFixedTemplate = '<div class="sticky-banner-container-fixed hidden">' +
+                                        '<div class="sticky-banner-outer-wrapper">'+
+                                            '<div class="sticky-banner-wrapper">' +
+                                                '<span class="sticky-banner-title">'+ stickyBannerTitle +'</span>' +
+                                                '<a class="mck-arrow-left-icon hidden" href="#" name="collapse"></a>'+
+                                                stickyBannerSubscribe +
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>';
 
-    $(document).on('click', '.sticky-banner-wrapper a.mck-arrow-left-icon', function(e) {
+    var stickyBannerStaticTemplate =  '<div class="sticky-banner-container-static">' +
+                                        '<div class="sticky-banner-outer-wrapper">'+
+                                            '<div class="sticky-banner-wrapper">' +
+                                                '<span class="sticky-banner-title">'+ stickyBannerTitle +'</span>' +
+                                                stickyBannerSubscribe +
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>';
+
+    $('main').after(stickyBannerFixedTemplate);
+    $('main').after(stickyBannerStaticTemplate);
+
+    $(document).on('click', '.sticky-banner-container-fixed a.mck-arrow-left-icon', function(e) {
         e.preventDefault();
         e.stopPropagation();
 
-        $('.sticky-banner-container').addClass('collapse');
+        $('.sticky-banner-container-fixed').addClass('collapse');
 
-        $('.sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon').css('display', 'none');
+        $('.sticky-banner-container-fixed a.mck-arrow-left-icon').css('display', 'none');
 
         return false;
     });
@@ -99,6 +112,10 @@ $(document).ready(function() {
     stickyHeaderTemplate(downloadUrl);
     showShare();
 
+    var $stickyBannerFixed = $('.sticky-banner-container-fixed');
+
+    var $stickyBannerStatic = $('.sticky-banner-container-static');
+
     $(window).scroll(function() {
 
         currentScroll = window.scrollY || document.documentElement.scrollTop;
@@ -123,15 +140,18 @@ $(document).ready(function() {
         }
 
         if(currentScroll >= showSticky && !visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
-            $('.sticky-banner-container').addClass('fixed');
+            $($stickyBannerStatic).addClass('hidden');
+            $($stickyBannerFixed).removeClass('hidden');
         }
 
         if(!visibleY(document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
-            $('.sticky-banner-container').addClass('fixed');
+            $($stickyBannerStatic).addClass('hidden');
+            $($stickyBannerFixed).removeClass('hidden');
         }
 
         if( visibleY(document.querySelector('#main_0_articleShare2_articleActions figure ul') )) {
-            $('.sticky-banner-container').removeClass('fixed');
+           $($stickyBannerFixed).addClass('hidden');
+           $($stickyBannerStatic).removeClass('hidden');
         }
 
         if ( !$('.new-icons .share-container').hasClass('hidden') ) {
@@ -143,7 +163,8 @@ $(document).ready(function() {
         }
 
         if(currentScroll < showSticky) {
-            $('.sticky-banner-container').removeClass('fixed');
+            $($stickyBannerFixed).addClass('hidden');
+            $($stickyBannerStatic).addClass('hidden');
         }
         
     });

@@ -34,7 +34,9 @@
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.btn-subscribe,
 .sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe,
 .sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe,
-.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe,
+.sticky-banner-container-fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe,
+.sticky-banner-container-static .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
     margin: 8px 0;
     font-size: 16px;
     padding: 12px 15px;

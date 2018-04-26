@@ -39,34 +39,35 @@
     position: relative;
 }
 
-
 /* ========================================= */
 /* Footer */
 /* ========================================= */
-.sticky-banner-container {
+.sticky-banner-container-fixed,
+.sticky-banner-container-static {
     background-color: #00ADEF;
     width: 100%;
-    height: 353px;
-    margin-top: 80px;
 }
 
 .sticky-banner-container + .article-closer {
     margin-top: 0px;
 }
 
-.sticky-banner-container .sticky-banner-outer-wrapper {
+.sticky-banner-container-fixed .sticky-banner-outer-wrapper,
+.sticky-banner-container-static .sticky-banner-outer-wrapper {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper {
+.sticky-banner-container-fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper,
+.sticky-banner-container-static .sticky-banner-outer-wrapper .sticky-banner-wrapper {
     display: flex;
     text-align: center;
     flex-direction: column;
 }
 
-.sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
+.sticky-banner-container-static .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title,
+.sticky-banner-container-fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
     color: #FFFFFF;
     font-weight: normal;
     font-style: normal;
@@ -75,41 +76,64 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     font-family: "Chronicle Deck",Georgia,Times,"Times New Roman",serif;
-    font-size: 36px;
-    line-height: 1.17;
     display: block;
     text-align: center;
+    font-size: 36px;
+    line-height: 1.17;
+}
+
+.sticky-banner-container-static .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe,
+.sticky-banner-container-fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
+    border-color: #FFFFFF;
+}
+
+/* Sticky Banner Static */
+.sticky-banner-container-static {
+    margin-top: 80px;
+    height: 353px;
+    transition: height .4s;
+}
+
+.sticky-banner-container-static.hidden {
+    height: 0;
+}
+
+.sticky-banner-container-static + .article-closer {
+    margin-top: 0px;
+}
+
+.sticky-banner-container-static .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
     margin: 104px auto 65px;
 }
 
-.sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
-    border-color: #FFFFFF;
+.sticky-banner-container-static .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
     margin: 0 auto 101px;
 }
 
-.sticky-banner-container .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon.hidden {
-    display: none;
-}
-
-/* Footer fixed */
-.sticky-banner-container.fixed {
+/* Sticky Banner Fixed */
+.sticky-banner-container-fixed {
     position: fixed;
     z-index: 105;
     bottom: 0;
     left: 0;
     height: 160px;
-    
+    transition: height .4s;
 }
 
-.sticky-banner-container.fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
+.sticky-banner-container-fixed.hidden,
+.sticky-banner-container-fixed.hidden.collapse {
+    height: 0;
+}
+
+.sticky-banner-container-fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
     margin: 30px auto 20px;
 }
 
-.sticky-banner-container.fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
+.sticky-banner-container-fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
     margin: 0 auto 27px;
 }
 
-.sticky-banner-container.fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon {
+.sticky-banner-container-fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon {
     display: block;
     color: #FFFFFF;
     position: absolute;
@@ -117,28 +141,28 @@
     top: 30px;
 }
 
-.sticky-banner-container.fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon:before {
+.sticky-banner-container-fixed .sticky-banner-outer-wrapper .sticky-banner-wrapper a.mck-arrow-left-icon:before {
     transform: rotate(-90deg);
     display: inline-block;
 }
 
 /* Footer fixed collapse */
-.sticky-banner-container.fixed.collapse {
+.sticky-banner-container-fixed.collapse {
     height: 73px;
 }
 
-.sticky-banner-container.fixed.collapse .sticky-banner-outer-wrapper .sticky-banner-wrapper {
+.sticky-banner-container-fixed.collapse .sticky-banner-outer-wrapper .sticky-banner-wrapper {
     flex-direction: row;
 }
 
-.sticky-banner-container.fixed.collapse .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
+.sticky-banner-container-fixed.collapse .sticky-banner-outer-wrapper .sticky-banner-wrapper .sticky-banner-title {
     font-size: 18px;
     line-height: 1.5;
     text-align: left;
     margin: 23px 0 22px auto;
 }
 
-.sticky-banner-container.fixed.collapse .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
+.sticky-banner-container-fixed.collapse .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
     margin: 17px auto 13px 30px;
 }
 
