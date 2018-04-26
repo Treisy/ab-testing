@@ -37,7 +37,7 @@ function stickyHeaderTemplate(downloadUrl) {
 }
 
 function stickyBannerTemplate() {
-    var stickyBannerTitle = 'Nunc ornare nisl ut risus gravida, eu rhoncus';
+    var stickyBannerTitle = 'Stay current on your favorite topics';
     var stickyBannerSubscribe = '<a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="/user-registration/register">Subscribe</a>';
 
     var stickyBannerFixedTemplate = '<div class="sticky-banner-container-fixed hidden">' +
@@ -89,7 +89,7 @@ function showShare() {
 
         return false;
     });
-};
+}
 
 var visibleY = function(el){
     var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height, 
@@ -106,7 +106,14 @@ var visibleY = function(el){
   };
 
 $(document).ready(function() {
+    var $aside =  $('aside.text-l.-span-right.disruptor.-signup-promo');
     downloadUrl = document.querySelector('.sticky-share aside figure ul li#main_0_articleShare_liArticlePdf_b a').href;
+
+    $($aside).css('display', 'none');
+
+    if ( $($aside).css('display') == 'none' ) {
+        document.querySelector('footer#main_0_divAboutAuthors').classList.remove('-signupAboveAboutAuthor');
+    }
 
     stickyBannerTemplate();
     stickyHeaderTemplate(downloadUrl);
@@ -120,15 +127,8 @@ $(document).ready(function() {
 
         currentScroll = window.scrollY || document.documentElement.scrollTop;
 
-        if( visibleY(document.querySelector('.article-hero-wrapper')) && $('.sticky-share-wrapper .sticky-share ul.new-icons').length > 0) {
-            stickyShareContainer = document.querySelector('.sticky-share-wrapper .sticky-share ul.new-icons');
-            stickyShareContainer.classList.add('hidden');
-        }
-
-        if ($('.sticky-share-tools').hasClass('_show')) {
-            console.log('show');
+        if( document.querySelector('.sticky-share-tools').classList.contains('_show') ) {
             if( $('.sticky-share-wrapper .sticky-share ul.new-icons').length === 0 ) {
-                console.log('create');
                 stickyHeaderTemplate(downloadUrl);
             }
             changeText();
@@ -139,6 +139,12 @@ $(document).ready(function() {
             $('.sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
         }
 
+        setTimeout(function() {
+            if ( visibleY(document.querySelectorAll('.sticky-share-wrapper .sticky-share ul')[0]) ) {
+                $('.sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
+            }
+        }, 200);
+        
         if(currentScroll >= showSticky && !visibleY( document.querySelector('#main_0_articleShare2_articleActions figure ul'))) {
             $($stickyBannerStatic).addClass('hidden');
             $($stickyBannerFixed).removeClass('hidden');

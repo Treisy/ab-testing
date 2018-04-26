@@ -95,6 +95,12 @@ $(document).ready(function(){
             $('.sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
         }
 
+        setTimeout(function() {
+            if ( visibleY(document.querySelectorAll('.sticky-share-wrapper .sticky-share ul')[0]) ) {
+                $('.sticky-share-wrapper .sticky-share ul.new-icons').addClass('hidden');
+            }
+        }, 200);
+
         if( currentScroll >= showSticky )  {
             $('.sticky-drawer-container').addClass('show');
         }else {
