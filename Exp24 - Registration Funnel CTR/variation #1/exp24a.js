@@ -105,6 +105,7 @@ var visibleY = function (el) {
 };
 
 $(document).ready(function () {
+    hideDisruptor();
     stickyBannerTemplate();
     showShare();
     authorsSpacing();

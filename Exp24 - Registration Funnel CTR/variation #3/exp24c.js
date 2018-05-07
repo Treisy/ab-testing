@@ -23,18 +23,18 @@ function stickyHeaderTemplate() {
     var body = 'I recommend you visit mckinsey.com to read:' + '\n\n' + articleTitle + '\n' + urlArticle;
 
     var templateHeader = '<ul class="new-icons hidden">' +
-        '<li><a href="mailto:?subject=' + subject + '&amp;body=' + encodeURIComponent(body) + '" data-capture-key="email" data-show-popup="login-overlay" class="mck-email-icon social-contact" aria-labelledby="email-interactive"></a></li>' +
-        '<li>' +
-        '<a data-capture-key="share-this-article" data-show-popup="login-overlay" class="mck-share-icon social-contact" aria-labelledby="share-interactive"></a>' +
-        '<div class="share-container hidden">' +
-        '<ul>' +
-        '<li><a href="#0" class="mck-linkedin-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on LinkedIn</span></a></li>' +
-        '<li><a href="#0" class="mck-twitter-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Twitter</span></a></li>' +
-        '<li><a href="#0" class="mck-facebook-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Facebook</span></a></li>' +
-        '<li><a href="mailto:?subject=' + subject + '&amp;body=' + encodeURIComponent(body) + '" class="mck-email-icon" role="button"><span class="visually-hidden">Email this article</span></a></li>' +
-        '</ul>' +
-        '</div>' +
-        '</li>' +
+        // '<li><a href="mailto:?subject=' + subject + '&amp;body=' + encodeURIComponent(body) + '" data-capture-key="email" data-show-popup="login-overlay" class="mck-email-icon social-contact" aria-labelledby="email-interactive"></a></li>' +
+        // '<li>' +
+        // '<a data-capture-key="share-this-article" data-show-popup="login-overlay" class="mck-share-icon social-contact" aria-labelledby="share-interactive"></a>' +
+        // '<div class="share-container hidden">' +
+        // '<ul>' +
+        // '<li><a href="#0" class="mck-linkedin-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on LinkedIn</span></a></li>' +
+        // '<li><a href="#0" class="mck-twitter-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Twitter</span></a></li>' +
+        // '<li><a href="#0" class="mck-facebook-icon" data-cid="soc-web" role="button"><span class="visually-hidden">Share this article on Facebook</span></a></li>' +
+        // '<li><a href="mailto:?subject=' + subject + '&amp;body=' + encodeURIComponent(body) + '" class="mck-email-icon" role="button"><span class="visually-hidden">Email this article</span></a></li>' +
+        // '</ul>' +
+        // '</div>' +
+        // '</li>' +
         '<li class="subscribe"><a class="btn btn-fill btn-subscribe" aria-labelledby="Subscribe" href="' + btnSubscribeUrl + '">Subscribe</a></li>' +
         '</ul>';
 
@@ -93,15 +93,17 @@ var visibleY = function (el) {
     } while (el != document.body);
     // Check its within the document viewport
     return top <= document.documentElement.clientHeight;
-}
+};
 
 $(document).ready(function () {
+    hideDisruptor();
     stickyBannerTemplate();
     stickyHeaderTemplate();
     showShare();
     changeUrlSubscribe();
 
     $(window).on('scroll', function sticky() {
+        hideDisruptor();
         changeUrlSubscribe();
         currentScroll = window.scrollY || document.documentElement.scrollTop;
 

@@ -135,6 +135,7 @@ $(document).ready(function () {
         document.querySelector('footer#main_0_divAboutAuthors').classList.remove('-signupAboveAboutAuthor');
     }
 
+    hideDisruptor();
     stickyBannerTemplate();
     stickyHeaderTemplate(downloadUrl);
     showShare();
