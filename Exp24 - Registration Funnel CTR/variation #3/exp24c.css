@@ -4,12 +4,18 @@
     box-shadow: 0 3px 10px 0 rgba(220, 220, 220, 0.5);
 }
 
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper {
+    justify-content: space-between;
+}
+
 /* ========================================= */
+
 /* Header */
+
 /* ========================================= */
 
 .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-email-icon.social-contact,
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact  {
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact {
     background-color: transparent;
     font-size: 24px;
     color: #00ADEF;
@@ -43,8 +49,11 @@
 }
 
 /* ========================================= */
+
 /* Footer */
+
 /* ========================================= */
+
 .sticky-banner {
     display: none;
     background-color: #00ADEF;
@@ -55,7 +64,7 @@
     left: 0;
 }
 
-.sticky-banner.show{
+.sticky-banner.show {
     display: block;
 }
 
@@ -85,7 +94,7 @@
     letter-spacing: normal;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-family: "Chronicle Deck",Georgia,Times,"Times New Roman",serif;
+    font-family: "Chronicle Deck", Georgia, Times, "Times New Roman", serif;
 }
 
 .sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
@@ -93,7 +102,7 @@
     border-color: #FFFFFF;
 }
 
-.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper .mck-arrow-left-icon.social-contact::before{
+.sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper .mck-arrow-left-icon.social-contact::before {
     color: #FFFFFF;
     transform: rotate(-90deg);
     margin-top: 30px;
@@ -101,8 +110,11 @@
 }
 
 /* ========================================= */
+
 /* Footer */
+
 /* ========================================= */
+
 .sticky-drawer-container {
     height: 179px;
     width: 288px;
@@ -172,6 +184,7 @@
 }
 
 /* Footer collapse */
+
 .sticky-drawer-container.collapse {
     height: 50px;
 }
@@ -182,27 +195,26 @@
 }
 
 /* ========================================= */
+
 /* Media queries */
+
 /* ========================================= */
+
 @media screen and (max-width: 767px) {
-   .sticky-share-tools _show  .sticky-share-wrapper {
-       margin-left: 0;
-   }
-
-   .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons {
-       align-content: flex-end;
-       margin-right: 15px;
-       justify-content: flex-end;
-   }
-
-   .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container {
+    .sticky-share-tools _show .sticky-share-wrapper {
+        margin-left: 0;
+    }
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons {
+        align-content: flex-end;
+        margin-right: 15px;
+        justify-content: flex-end;
+    }
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.share-container {
         right: -69px;
     }
-
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>a.social-contact {
         padding-right: 0;
     }
-
 }
 
 @media screen and (min-width: 768px) and (max-width: 1180px) {

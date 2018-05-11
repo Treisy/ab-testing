@@ -4,11 +4,17 @@
     box-shadow: 0 3px 10px 0 rgba(220, 220, 220, 0.5);
 }
 
-/* ========================================= */
-/* Header */
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper {
+    justify-content: space-between;
+}
+
 /* ========================================= */
 
-.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact  {
+/* Header */
+
+/* ========================================= */
+
+.sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.mck-share-icon.social-contact {
     background-color: transparent;
     font-size: 16px;
     color: #00ADEF;
@@ -36,9 +42,10 @@
     position: relative;
 }
 
-
 /* ========================================= */
+
 /* Footer */
+
 /* ========================================= */
 
 .sticky-banner {
@@ -53,7 +60,7 @@
     border-top: 1px solid #DEE1E0;
 }
 
-.sticky-banner.show{
+.sticky-banner.show {
     display: block;
 }
 
@@ -80,7 +87,7 @@
     letter-spacing: normal;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-family: "Chronicle Deck",Georgia,Times,"Times New Roman",serif;
+    font-family: "Chronicle Deck", Georgia, Times, "Times New Roman", serif;
 }
 
 .sticky-banner .sticky-banner-outer-wrapper .sticky-banner-wrapper a.btn-subscribe {
@@ -93,25 +100,24 @@
 }
 
 /* ========================================= */
+
 /* Media queries */
+
 /* ========================================= */
+
 @media screen and (max-width: 767px) {
-    .sticky-share-tools _show  .sticky-share-wrapper {
+    .sticky-share-tools _show .sticky-share-wrapper {
         margin-left: 0;
     }
- 
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons {
         align-content: flex-end;
         margin-right: 15px;
         justify-content: flex-end;
     }
-
-    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li> .share-container {
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.share-container {
         right: -69px;
     }
-
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.social-contact:before {
         left: 0;
     }
-
- }
+}
