@@ -1,0 +1,71 @@
+<form method="post" id="form_SignIn" novalidate="novalidate" action="">
+    <div class="popup-window _signIn " id="signInWhite">
+        <div class="interactive-container _visible">
+            <div class="background"></div>
+            <div class="outer popup">
+                <div class="wrapper">
+                    <div class="popup-content">
+                        <!-- Close btn -->
+                        <span class="close-btn-holder">
+                            <span class="closeText">
+                                <a href="javascript:void(0);"> No, thank you </a>
+                            </span>
+                            <span class="close-btn mck-radial-x-icon" role="link"></span>
+                        </span>
+                        <!-- Header -->
+                        <div class="up one-up one-up-medium one-up-medium-top">
+                            <header class="text-xl module-header">
+                                <h3 class="title headline"> to keep reading</h3>
+                            </header>
+                            <header id="requiredMessageDescription" class="text-m module-header success" style="display: block;">
+                                <div class="description module-description">Welcome back. Signing in gives you access to our latest articles and reports.</div>
+                            </header>
+                        </div>
+                        <div class="up one-up one-up-medium one-up-medium-middle" data-module="PopupForm">
+                            <div id="signInWhiteContent" class="form-content">
+                                <!-- Error / success msg -->
+                                <div id="errorMessage" class="alert error no-pading-bottom no-margin-bottom" style="display: none;">
+                                    <p id="main_0_universal_0_errormsg">Sorry something went wrong. Please try again</p>
+                                </div>
+                                <div id="successMessage" class="success-message" style="display: none;"> </div>
+                                <!-- Popup Content-->
+                                <div id="formContent_signIn" style="display: block;">
+                                    <div id="emailDiv" class="form-group">
+                                        <div class="controls-group">
+                                            <label for="email_signIn">Email</label>
+                                            <input class="required textField" name="email_signIn" type="email" maxlength="128" id="email_signIn" tabindex="1" data-rule-required="true"
+                                                data-rule-email="true" data-msg-email="Please enter a valid email address." data-msg-required="Please enter your email address."
+                                                aria-required="true">
+                                            <span id="emailValidator" style="display: none;"></span>
+                                        </div>
+                                    </div>
+                                    <div id="changePasswordDiv" class="form-group">
+                                        <div class="controls-group">
+                                            <label id="lblPassword" for="password_signIn"> Password</label>
+                                            <input class="required textField" name="password_signIn" type="password" maxlength="15" id="password_signIn" tabindex="2"
+                                                data-rule-required="true" data-msg-required="Please enter your password." autocomplete="off"
+                                                aria-required="true">
+                                            <span id="PasswordValidator" style="display: none;"></span>
+                                        </div>
+                                    </div>
+                                    <section class="up two-up">
+                                        <div class="submit_btn">
+                                            <input tabindex="3" id="signInWhite_btnSubmit" type="button" value="KEEP READING" name="signInWhite_btnSubmit" class="btn-submit">
+                                        </div>
+                                        <div class="noAccount">
+                                            <span>
+                                                <a href="javascript:void(0);" id="fromSignInToForgot" rel="nofollow">Forgot password?</a> |
+                                                <a href="javascript:void(0);" id="fromSignInToSignUp" rel="nofollow">Don\'t have an account?</a>
+                                            </span>
+                                        </div>
+                                    </section>
+                                    <input name="__RequestVerificationToken" type="hidden" value="PJhPQ0vqeq0OLXAbdjIQV5qp778e8Nhrx98r2dH1-OnN2JtCfxXz5QQJ1Bx3i1ndyyIRhp9R6I9TGGJzbhPs1xBFoeY1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

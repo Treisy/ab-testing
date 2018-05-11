@@ -1,0 +1,87 @@
+<form method="post" id="form_SignUp" novalidate="novalidate" action="">
+    <div class="popup-window _signUp " id="signUpWhite">
+        <div class="interactive-container _visible">
+            <div class="background"></div>
+            <div class="outer popup">
+                <div class="wrapper">
+                    <div class="popup-content" style="margin-top: 40px;">
+                        <!-- Close btn -->
+                        <span class="close-btn-holder">
+                            <span class="closeText">
+                                <a href="javascript:void(0);"> No, thank you </a>
+                            </span>
+                            <span class="close-btn mck-radial-x-icon" role="link"></span>
+                        </span>
+                        <div class="up one-up one-up-medium one-up-medium-top">
+                            <header class="text-xl module-header">
+                                <h3 class="title headline">Sign up to keep reading</h3>
+                            </header>
+                            <header id="requiredMessageDescription" class="text-m module-header success" style="display: block;">
+                                <div class="description module-description">Creating your account gives you access to our latest articles and reports. It\'s fast and
+                                    free!
+                                </div>
+                            </header>
+                        </div>
+                        <div class="up one-up one-up-medium one-up-medium-middle" data-module="PopupForm">
+                            <div class="form-content">
+                                <!-- Error / success msg -->
+                                <div id="errorMessage" class="alert error no-pading-bottom no-margin-bottom" style="display: none;">
+                                    <p id="main_0_universal_0_errormsg">Sorry something went wrong. Please try again</p>
+                                </div>
+                                <div id="successMessage" class="success-message" style="display: none;"> </div>
+                                <div id="formContent_signUp" style="display: block;">
+                                    <div class="form-group ab-message-hidden">
+                                        <label for="contactProfileMessageExpTwenty">PERSONAL MESSAGE</label>
+                                        <textarea class="required" data-msg-required="Please provide your message." rows="8" cols="20" maxlength="8192" name="contactProfileMessageExpTwenty"
+                                            id="contactProfileMessageExpTwenty" autofocus=""></textarea>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="name_signUp">FULL NAME</label>
+                                            <input class="required textField" name="name_signUp" id="name_signUp" maxlength="50" type="text" data-msg-required="Please provide your name."
+                                                aria-required="true"> </div>
+                                        <div class="form-group">
+                                            <label for="email_signUp">EMAIL</label>
+                                            <input name="email_signUp" id="email_signUp" maxlength="128" class="required textField " type="email" data-msg-email="Please provide a valid email address."
+                                                data-msg-required="Please provide your company email address." aria-required="true"> </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="company_signUp">COMPANY</label>
+                                            <input class="required textField" name="company_signUp" data-msg-required="Please provide an organization name." id="company_signUp"
+                                                maxlength="50" type="text" data-rule-spam="true" data-msg-spam="Please provide a valid company name."
+                                                data-pattern="[<>%?^()]" aria-required="true"> </div>
+                                        <div class="form-group">
+                                            <label for="role_signUp">ROLE</label>
+                                            <input class="required textField" name="role_signUp" id="role_signUp" maxlength="50" data-msg-required="Please provide a role."
+                                                type="text" data-rule-spam="true" data-msg-spam="Please provide a valid title."
+                                                aria-required="true"> </div>
+                                    </div>
+                                    <section class="up two-up">
+                                        <div class="captcha-wrapper">
+                                            <div id="signUpCaptcha" class="form-group" data-module="Recaptcha"> </div>
+                                            <span class="error"></span>
+                                        </div>
+                                        <div class="submit-footer">
+                                            <div class="form-group">
+                                                <p>From time to time we may send you email, but you can opt out at any time.</p>
+                                                <div class="submit_btn">
+                                                    <input name="signUpWhite_btnSubmit" id="signUpWhite_btnSubmit" type="button" value="KEEP READING" class="btn-submit">
+                                                </div>
+                                            </div>
+                                            <div class="noAccount">
+                                                <span>
+                                                    <a href="javascript:void(0);" id="fromSignUpToSignIn" rel="nofollow">Have an account?</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
