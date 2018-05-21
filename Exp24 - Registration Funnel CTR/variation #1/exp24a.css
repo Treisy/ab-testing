@@ -8,6 +8,10 @@
     justify-content: space-between;
 }
 
+aside.-span-right.disruptor.-signup-promo.-left {
+    display: none;
+}
+
 /* ========================================= */
 
 /* Header */
@@ -119,5 +123,12 @@
     }
     .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper .sticky-share ul.new-icons>li>.social-contact:before {
         left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+    .sticky-share-tools._show .sticky-share-outer-wrapper .sticky-share-wrapper {
+        margin: 0 9.44993%;
+        width: 81.10014%;
     }
 }
