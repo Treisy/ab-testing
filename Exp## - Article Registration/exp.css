@@ -1,0 +1,407 @@
+/*========== Sign Up ==========*/
+
+@media screen and (max-width: 767px) {
+    #signUpWhite, #signInWhite, #form_forgotPassword {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .preloaderSVG {
+        margin-bottom: 20px;
+        margin-top: -16px;
+    }
+    #signUpWhite .preloaderSVG {
+        margin-top: 16px;
+        margin-bottom: 0px;
+    }
+    .up.one-up.one-up-medium.one-up-medium-top {
+        margin: 4px 0 0 0 !important;
+        padding-left: 75px !important;
+        padding-right: 75px !important;
+    }
+    .popup-window .popup .popup-content>.up {
+        padding-left: 29px;
+        padding-right: 25px;
+        width: 660px !important;
+        margin: 0;
+    }
+    #signUpWhite section.up, #signInWhite section.up, #form_forgotPassword section.up {
+        margin-top: 40px;
+    }
+    .up.one-up.one-up-medium.one-up-medium-middle {
+        margin-top: 20px !important;
+        width: 100%;
+    }
+    .newPopupWrapper {
+        width: 742px;
+        height: 100%;
+        padding-right: 50px;
+        overflow-y: auto;
+        position: relative;
+        left: -30px;
+        overflow-x: hidden;
+    }
+    #exp-reload {
+        padding: 2px;
+        font-size: 12px;
+    }
+    .fixedBody {
+        overflow-y: visible !important;
+    }
+    #signUpCaptcha:first-child {
+        width: 300px !important;
+        height: 78px;
+        position: relative !important;
+    }
+    #forgotPasswordCaptcha {}
+    .captcha-wrapper #forgotPasswordCaptcha iframe {
+        left: 0 !important;
+        top: 30px
+    }
+    #signUpWhite .popup .wrapper, #signInWhite .popup .wrapper, #forgotPasswordWhite .popup .wrapper {
+        top: 0;
+        overflow-y: auto;
+        overflow: hidden;
+        height: 100%;
+        position: fixed !important;
+        left: calc(50%) !important;
+        margin: 0 0 0 -350px !important;
+        max-width: 705px !important;
+        -ms-overflow-style: none;
+    }
+    #signUpWhite._signUp .popup-content, #signInWhite .popup-content, #forgotPasswordWhite .popup-content {
+        width: 660px;
+        border-radius: 3px;
+    }
+    #signInWhite .popup .wrapper::-webkit-scrollbar, #signUpWhite .popup .wrapper::-webkit-scrollbar, #forgotPasswordWhite .popup .wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    #signInWhite .popup .wrapper::-moz-scrollbar, #signUpWhite .popup .wrapper::-webkit-scrollbar, #forgotPasswordWhite .popup .wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    #signInWhite .popup-content, #signUpWhite .popup-content, #forgotPasswordWhite .popup-content {
+        margin: 40px 0 0 11px;
+    }
+    #signUpWhite .form-content .form-group+.form-group, #signInWhite .form-content .form-group+.form-group, #form_forgotPassword .form-content .form-group+.form-group {
+        margin-top: 30px;
+    }
+    .captcha-wrapper {
+        margin-top: 12px;
+    }
+    #formContent_forgotPassword .captcha-wrapper {
+        margin-top: 40px;
+    }
+    .submit-footer .form-group>p {
+        margin: 0;
+        font-size: 14px;
+    }
+    /* -- Form close btn  -- */
+    .popup-content .closeText {
+        position: relative;
+        text-align: right;
+        font-size: 14px;
+        width: 620px;
+        top: 9px;
+        color: #00ACED;
+        display: inline-block;
+    }
+    .popup-window .popup .popup-content .close-btn {
+        margin: 0;
+    }
+    .popup-window .popup .popup-content .mck-radial-x-icon:before {
+        color: #fff !important;
+        ;
+    }
+    .popup-window .popup .popup-content .mck-radial-x-icon:after {
+        background-color: #2bafe9 !important;
+    }
+    #signUpWhite header {
+        text-align: center;
+    }
+    #signUpWhite input, #signInWhite input {
+        min-height: inherit;
+        border-radius: 3px;
+        width: 290px;
+        height: 34px;
+        padding: 5px !important;
+    }
+    #forgotPasswordWhite input {
+        min-height: inherit;
+        border-radius: 3px;
+        height: 34px;
+        width: 302px !important;
+        padding: 5px !important;
+    }
+    #signUpWhite .up.two-up {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    #signUpWhite .form-content .form-group label {
+        margin-bottom: 5px;
+    }
+    #signUpWhite #signUpWhite_btnSubmit, .noAccount {
+        margin-top: 20px;
+    }
+    #signUpWhite .g-recaptcha {
+        position: relative;
+        left: 107px;
+    }
+    .form-content .form-group.has-error label {}
+    .popup-window .popup .popup-content {
+        padding-bottom: 45px;
+    }
+    .popup-window .popup .popup-content .up .module-header {
+        width: 100%;
+    }
+    .popup-window .popup .popup-content .up .module-header h3 {
+        font-size: 42px !important;
+        font-family: Chronicle Deck !important;
+        font-weight: 600;
+        line-height: 1em;
+        color: #00306e;
+        margin-bottom: 6px !important;
+    }
+    .popup-window .popup .popup-content .up .module-header .description.module-description {
+        font-size: 18px;
+        font-family: Chronicle Deck;
+        color: #000;
+        font-weight: 400;
+        line-height: 1.4em;
+        margin-top: 20px;
+    }
+    #signUpWhite._signUp.popup-window .form-content_signUp {
+        width: 100% !important;
+    }
+    #signUpWhite.signUp.popup-window .popup-content .headline {
+        color: #03316c;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    #signUpWhite._signUp .form-row:nth-child(3) {
+        margin: 30px 0;
+    }
+    #signUpWhite._signUp .ab-message-hidden {
+        display: none;
+    }
+    #signUpWhite._signUp #errorMessage {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    /* -- Form fields  -- */
+    #signUpWhite._signUp .form-row {
+        display: table;
+    }
+    #signUpWhite._signUp .form-row .form-group:nth-child(1) {
+        padding-right: 10px;
+        display: table-cell;
+        width: 50%;
+    }
+    #signUpWhite._signUp .form-row .form-group:nth-child(2) {
+        padding-left: 10px;
+        display: table-cell;
+        width: 50%;
+    }
+    /* -- Form footer -- */
+    #signUpWhite._signUp .submit-footer {
+        display: table;
+        margin-top: 35px;
+        width: 100%;
+    }
+    #signUpWhite._signUp .submit-footer form-group {
+        display: table-cell;
+    }
+    .form-content .form-group.has-error .help-block {
+        margin: 4px 0 0 0 !important;
+        position: absolute;
+        font-size: 12px;
+        height: 0;
+    }
+    .help-block-captcha {
+        font-size: 12px !important;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: #ed1c24;
+        display: block;
+        padding: 0;
+        border-radius: 3px;
+        margin: 0;
+        position: absolute;
+        width: 430px;
+        text-align: left;
+        padding-left: 151px;
+    }
+    #signUpWhite .help-block-captcha {
+        padding-left: 0px;
+    }
+    #fromSignUpToSignIn, #fromSignInToSignUp, #fromForgotToSignUp, #fromSignInToForgot, #fromForgotToSignIn {
+        font-size: 12px;
+        font-family: Whitney SSm;
+    }
+    #input#signUpWhite_btnSubmit, #signInWhite_btnSubmit, #forgotPasswordWhite_btnSubmit {
+        font-size: 12px;
+    }
+}
+
+/*========== End Sign Up ==========*/
+
+/*========== Sign In ==========*/
+
+@media screen and (max-width: 767px) {
+    .popup-window._signIn {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #signInWhite header {
+        text-align: center;
+    }
+    #signInWhite #signInWhiteContent {
+        width: 100%;
+        text-align: center;
+    }
+    .form-content .form-group .controls-group {
+        text-align: left;
+        display: inline-table;
+    }
+    #signInWhite .form-content .form-group label {
+        display: block !important;
+    }
+    ._signIn.popup-window .form-content {
+        width: 100% !important;
+    }
+    ._signIn.popup-window .popup-content .headline {
+        color: #03316c;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    ._signIn .ab-message-hidden {
+        display: none;
+    }
+    ._signIn #errorMessage {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    #signInWhite .form-content .form-group label {
+        margin-bottom: 5px;
+    }
+}
+
+/*========== End Sign In ==========*/
+
+/*========== Fortgot Password ==========*/
+
+@media screen and (max-width: 767px) {
+    .popup-window._forgotPassword {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #forgotPasswordWhite header {
+        text-align: center;
+    }
+    #forgotPasswordWhite #forgotPasswordWhiteContent {
+        width: 100%;
+        text-align: center;
+    }
+    #forgotPasswordWhite .form-content .form-group {
+        width: 303px;
+        left: 0px;
+        margin: auto auto;
+    }
+    #forgotPasswordWhite .form-content .form-group label {
+        display: block !important;
+    }
+    #forgotPasswordWhite .g-recaptcha {
+        position: relative;
+        left: 0;
+        margin-top: 40px;
+    }
+    ._forgotPassword.popup-window .form-content {
+        width: 100% !important;
+    }
+    ._forgotPassword.popup-window .popup-content .headline {
+        color: #03316c;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    ._forgotPassword .ab-message-hidden {
+        display: none;
+    }
+    ._forgotPassword #errorMessage {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    ._forgotPassword .form-content .form-group label {
+        margin-bottom: 5px;
+    }
+}
+
+/*========== End Forgot Password ==========*/
+
+/*========== Confirmation ==========*/
+
+/* feedback popup */
+
+#_signUp_confirmation {
+    position: fixed;
+    right: 0;
+    width: 530px;
+    bottom: -200px;
+    background-color: #00adef;
+    padding: 20px 20px 0px 20px;
+    border: 1px solid lightgray;
+    text-align: center;
+}
+
+#_signUp_confirmation span.close-btn.mck-radial-x-icon {
+    position: absolute;
+    right: 40px;
+    top: 2px;
+}
+
+#_signUp_confirmation .mck-radial-x-icon:before {
+    color: #fff !important;
+}
+
+#_signUp_confirmation h1.confirmationTitle {
+    font-size: 41px;
+    color: #fff;
+}
+
+#_signUp_confirmation p.confirmationDescription {
+    color: #00306e;
+}
+
+#_signUp_confirmation a {
+    color: #00306e;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#_signUp_confirmation .close-btn:before {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    color: #00adef !important;
+}
+
+#_signUp_confirmation .mck-radial-x-icon:after {
+    background-color: #fff !important;
+}
+
+#_signUp_confirmation .close-btn:after {
+    background-color: #e60c0c;
+    border-radius: 50%;
+    content: '';
+    height: 36px;
+    left: 2px;
+    width: 36px;
+    z-index: 1;
+    position: absolute;
+    top: 2px;
+}
+
+/*========== End Confirmation ==========*/
